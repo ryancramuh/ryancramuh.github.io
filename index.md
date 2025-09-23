@@ -1,3 +1,8 @@
+---
+title: Ryan's Homepage
+nav_order: 1
+---
+
 # Ryan's Homepage
 
 ## TODO List
