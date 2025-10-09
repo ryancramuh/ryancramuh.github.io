@@ -1,5 +1,6 @@
 ---
 title: PHYS 425
+parent: Fall 2025
 nav_order: 3
 --- 
 
