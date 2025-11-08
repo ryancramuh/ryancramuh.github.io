@@ -26,3 +26,7 @@ nav_order: 3
 ## Homeworks 
 
   - [Problem Set 1](homeworks/PHYS_425_PS_1.pdf)
+
+  - [Problem Set 2](homeworks/PHYS_425_PS_2.pdf) 
+
+  - [Problem Set 3](homeworks/PHYS_425_PS_3.pdf)
