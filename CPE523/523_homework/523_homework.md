@@ -8,3 +8,4 @@ nav_order: 2
 
  - [Homework 1](523_homework1.md) 
  - [Homework 2](523_homework2.md)
+ - [Homework 3](523_homework3.md)
