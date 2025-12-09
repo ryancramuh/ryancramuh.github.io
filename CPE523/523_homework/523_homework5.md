@@ -25,11 +25,11 @@ First we need an appropriate way to model a wire. Note that a wire is essentiall
 
 ![pi_model](pi_model.png)
 
-Let the wire have length $L$, capacitance per unit length $C_W$, and a resistance per unit length $R_w$. The inverters are sized for equal rise and fall time with p to n ratio of $\Beta$. The transistor gate capacitance per $\mu m$ is $C_T$ and the equivalent resistance is $R_T \times \mu m$. (i.e., an inverter with an nMOS of width $W$ $\mu m$, will have $W(1+\Beta)C_T$ of gate capacitance and an equal resistance of $R_T/W$ for pull-up and pull-down). The diffusion capacitance per $\mu m$ is $C_D$, and for our analysis, it is roughly equal to the gate cap. We break the entire wire into $N$ segments by inserting $N-1$ repeaters. The figure below hows an example line with $N=3$. We will assume that the final load capacitance is equal to the capacitance of a repeater (it keeps the problem symmetric). Here assume that the drive is also part of the repeater chain. Thus you can use $N$ in your calculations instead of $N-1$. 
+Let the wire have length $L$, capacitance per unit length $C_W$, and a resistance per unit length $R_w$. The inverters are sized for equal rise and fall time with p to n ratio of $\beta$. The transistor gate capacitance per $\mu m$ is $C_T$ and the equivalent resistance is $R_T \times \mu m$. (i.e., an inverter with an nMOS of width $W$ $\mu m$, will have $W(1+\beta)C_T$ of gate capacitance and an equal resistance of $R_T/W$ for pull-up and pull-down). The diffusion capacitance per $\mu m$ is $C_D$, and for our analysis, it is roughly equal to the gate cap. We break the entire wire into $N$ segments by inserting $N-1$ repeaters. The figure below hows an example line with $N=3$. We will assume that the final load capacitance is equal to the capacitance of a repeater (it keeps the problem symmetric). Here assume that the drive is also part of the repeater chain. Thus you can use $N$ in your calculations instead of $N-1$. 
 
 ![inverter](inverter.png) 
 
-Let's now zoom in to one segment of repeater and wire. You already know how to model an inveter - It has a driving resistance of $R_T / W$ and an intrinsic cap of $W(1+\Beta)C_D$. We will use the "pi model" for our wire segment (not that in the diagram below, the wire segment is of one length). Finally, since we consider a repeater as our load, we can model it simply as $W(1+\Beta)C_T$ of gate cap. Putting things together we get: 
+Let's now zoom in to one segment of repeater and wire. You already know how to model an inveter - It has a driving resistance of $R_T / W$ and an intrinsic cap of $W(1+\beta)C_D$. We will use the "pi model" for our wire segment (not that in the diagram below, the wire segment is of one length). Finally, since we consider a repeater as our load, we can model it simply as $W(1+\beta)C_T$ of gate cap. Putting things together we get: 
 
 ![together](together.png) 
 
@@ -37,12 +37,12 @@ Unfortunately this leads to a more complex $RC$ circuit than we have seen in EE2
 
 ![small_elmore](small_elmore.png)
 
-1. Compute the total delay from driver to receiver as a function of $W$, $L$, $N$ and the physical parameters of the wires and gates ($R_W$, $C_W$, $R_T$, $C_T$, $\Beta$).
+1. Compute the total delay from driver to receiver as a function of $W$, $L$, $N$ and the physical parameters of the wires and gates ($R_W$, $C_W$, $R_T$, $C_T$, $\beta$).
 
 2. Find $N$ which minimizes the delay (this does not depend on $W$) and then find $W$ which minimizes delay. 
 
-3. Solve for the delay per micron of wire length in terms of ($R_W$, $C_W$, $R_T$, $C_T$, $\Beta$). Ignore annoying little details like the fact that it is difficult to build a non-integer number of repeaters or that logic desigers may go ballistic if you insert an odd number of inversions late in the design process. 
+3. Solve for the delay per micron of wire length in terms of ($R_W$, $C_W$, $R_T$, $C_T$, $\beta$). Ignore annoying little details like the fact that it is difficult to build a non-integer number of repeaters or that logic desigers may go ballistic if you insert an odd number of inversions late in the design process. 
 
-4. Now, please substitute the universal transistor parameters to get a numeric answer. The $R_{sq}$ for an nMOS transistor is roughly 12K (note this is NOT $R_T$), transistor gate capacitance is $1.2fF/\mu m$, $\Beta = 2$. For the wires, assume that the wire capacitance is $0.3fF/\mu m$, and the resistance is $0.03\ohm/\square$ and the wire width is $0.5\mu m$. Compute the optimal wire delay (ps/mm), wire length between repeaters (mm), and a size of each repeater ($\mu m$). What is the ratio between the speed of light $mm/ps$ in a medium with $\epsilon = 3.9$, and the speed you calculate? 
+4. Now, please substitute the universal transistor parameters to get a numeric answer. The $R_{sq}$ for an nMOS transistor is roughly 12K (note this is NOT $R_T$), transistor gate capacitance is $1.2fF/\mu m$, $\beta = 2$. For the wires, assume that the wire capacitance is $0.3fF/\mu m$, and the resistance is $0.03\ohm/\square$ and the wire width is $0.5\mu m$. Compute the optimal wire delay (ps/mm), wire length between repeaters (mm), and a size of each repeater ($\mu m$). What is the ratio between the speed of light $mm/ps$ in a medium with $\epsilon = 3.9$, and the speed you calculate? 
 
 5. When designing the layout for the SRAM cells in HW1, you may have been tempted to use poly for routing the wordline/bitline/$V_{DD}$/$GND$. Armed with more knowledge about wires (lecture notes 3 and 7), why is that a bad idea? 
