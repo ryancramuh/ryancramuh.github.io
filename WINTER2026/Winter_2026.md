@@ -10,10 +10,6 @@ nav_exclude: false
 
 ## [CPE 426](CPE426/CPE426.md) 
 
-## [EE 529](EE529/EE529.md) 
-
-## [EE 531](EE531/EE531.md) 
-
 ## [CSC 453](CSC453/CSC453.md)
 
 ## [Capstone](../CAPSTONE/capstone.md)
