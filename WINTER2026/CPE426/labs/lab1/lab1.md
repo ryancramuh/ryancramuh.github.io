@@ -4,6 +4,8 @@ parent: CPE 426 Labs
 nav_order: 1
 --- 
 
+https://github.com/ryancramuh/PUF
+
 # Lab 1 - PUF 
 
 Please submit your lab as an archive file containing your project and your PDF write up.
