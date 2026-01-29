@@ -4,7 +4,7 @@ parent: CPE 426 Labs
 nav_order: 1
 --- 
 
-https://github.com/ryancramuh/PUF
+[PUF Github](https://github.com/ryancramuh/PUF)
 
 # Lab 1 - PUF 
 
