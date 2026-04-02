@@ -12,6 +12,8 @@ nav_exclude: false
 
 ## [CPE 464 - Computer Networks](CPE464/CPE464.md)
 
+## [PHYS 427 - Advanced Solid State Physics](PHYS427/PHYS427.md) 
+
 ## [Senior Project II](SP/SP.md)
 
 ## [EE 302 - Control Systems](EE302/EE302.md)
