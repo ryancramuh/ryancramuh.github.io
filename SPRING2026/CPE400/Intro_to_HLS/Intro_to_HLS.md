@@ -104,12 +104,22 @@ Logic blocks are implemented as a LUT, a memory where the address signals are th
 
    - eight config bits for programming the LUT 
    - one bit to decide if input is combinational or flopped 
+   - FF is basic memory element and co-located with LUTs 
 
-**Def: Slice (noun)** - a small number of LUTs and FFs combined with routing logic (multiplexers) to move inputs, outputs, and internal value between the LUTs and FFs 
+**Def: Slice (noun)** - a small number of LUTs and FFs combined with routing logic (multiplexers) to move inputs, outputs, and internal value between the LUTs and FFs (Powerful programmable logic element)
 
- 3. Simple slice that contains a more complex 3-LUT 
+**note**: exact number and size of LUTs, FFs, and MUXs varies by architecture. 
+
+ 3. Simple slice that contains a more complex 3-LUT  
+
+
+
 ### Glossary 
 
  - EDA: Electronic Design Automation (tools) 
  - HLS: High Level Synthesis 
  - RTL: Register Transfer Level 
+ - LUT: Look-Up Table
+ - FF: one-bit storage element 
+ - Slice: small number of LUTs and FFs with routing logic 
+ 
