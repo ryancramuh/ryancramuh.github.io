@@ -1,5 +1,0 @@
-# EE 531
-
-## [Lectures](lectures/lectures) 
-
-## [Labs](labs/labs)
