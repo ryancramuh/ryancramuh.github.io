@@ -19,3 +19,13 @@ To view the DXF file, please download the following:
 
 **My mad hatter is in the second row, second column** 
 ![Wafer Mask](IMG_9339.jpg) 
+
+## Update Q2 2026: We have completed lithography on the wafer. 
+
+**Here is my design, taped to a small piece of the wafer**
+
+![Large view](holding_wafer.jpg) 
+
+![Medium view](wafer_closer.jpg) 
+
+![Close view](wafer_final.jpg)
