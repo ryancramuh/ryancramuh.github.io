@@ -1,6 +1,6 @@
 ---
 title: EVA
-nav_order: 5
+nav_order: 9
 ---
 
 # Ryan Cramer — Work with EVA (Environmental Vibration Analyzer)

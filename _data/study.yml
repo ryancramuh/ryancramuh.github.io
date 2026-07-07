@@ -1,0 +1,95 @@
+# =============================================================================
+# study.yml  —  data source for the Weekly Study Dashboard (/dashboard.html)
+# -----------------------------------------------------------------------------
+# EDIT THIS FILE to change what shows on the dashboard. The page (dashboard.html)
+# is a pure template: it loops over `weeks` and renders each item as a checkable
+# task with category tag + resource links. No HTML editing required.
+#
+# SCHEMA
+#   updated: "YYYY-MM-DD"          # shown in the dashboard header
+#   weeks:                          # list, rendered newest-first as written
+#     - id: <slug>                  # REQUIRED, stable & unique. Used as the
+#                                   #   localStorage key prefix for checkbox
+#                                   #   state — DO NOT rename an existing id or
+#                                   #   users lose their checked progress.
+#       label: "<short tag>"        # e.g. "Week of Jul 6" (mono eyebrow)
+#       title: "<week theme>"       # headline for the column
+#       focus: "<one-line focus>"   # optional subtitle
+#       items:                      # the tasks
+#         - text: "<what to study>" # REQUIRED
+#           cat:  <category key>    # one of the keys below (drives tag color)
+#           note: "<optional hint>" # optional secondary line
+#           resources:              # optional list of links
+#             - { label: "<name>", url: "<https url>" }
+#
+# CATEGORY KEYS (color-coded, validated palette): must be one of
+#   rtl     RTL / HDL design
+#   pd      Physical design / PnR / STA
+#   asic    ASIC flow / RTL-to-GDSII / PDK
+#   verif   Verification / UVM / formal
+#   arch    Computer architecture / microarch
+#   dsp     DSP / signal processing
+#   eda     EDA tools / scripting / infra
+#   papers  Papers / theory / reading
+# =============================================================================
+
+updated: "2026-07-06"
+
+weeks:
+  - id: 2026-w28
+    label: "Week of Jul 6"
+    title: "STA foundations & clock trees"
+    focus: "Get fluent in timing closure vocabulary before the fall EE529 push."
+    items:
+      - text: "Work through setup/hold slack derivations by hand for a 3-stage path"
+        cat: pd
+        note: "Tie launch/capture edges back to the clock period equation."
+        resources:
+          - { label: "vlsi-expert STA", url: "https://www.vlsi-expert.com/p/static-timing-analysis-sta.html" }
+      - text: "Read: clock tree synthesis goals — skew, latency, useful skew"
+        cat: pd
+        resources:
+          - { label: "Synopsys CTS primer", url: "https://www.synopsys.com/glossary/what-is-clock-tree-synthesis.html" }
+      - text: "Skim a SkyWater sky130 standard-cell datasheet; note pin caps & drive strengths"
+        cat: asic
+        resources:
+          - { label: "sky130 PDK docs", url: "https://skywater-pdk.readthedocs.io/" }
+      - text: "RTL: code a parameterized synchronous FIFO with full/empty flags"
+        cat: rtl
+        note: "Gray-code the pointers; think about metastability at the boundary."
+      - text: "Paper: 'A Family of Adders' — carry-lookahead vs carry-select tradeoffs"
+        cat: papers
+        note: "PDF already in Stanford_VLSI/Adders/."
+
+  - id: 2026-w27
+    label: "Week of Jun 29"
+    title: "RTL-to-GDSII mental model"
+    focus: "See the whole flow end-to-end once, at low resolution."
+    items:
+      - text: "Watch the 'RTL-to-GDSII front-end flow' beginner webinar, take a flow diagram"
+        cat: asic
+        resources:
+          - { label: "Cadence webinar", url: "https://community.cadence.com/cadence_blogs_8/b/di/posts/technical-webinar-a-beginner-s-guide-to-rtl-to-gdsii-front-end-flow" }
+      - text: "Synthesize a small design with Yosys; inspect the gate-level netlist"
+        cat: eda
+        resources:
+          - { label: "Yosys", url: "https://yosyshq.net/yosys/" }
+          - { label: "OpenLane", url: "https://openlane.readthedocs.io/" }
+      - text: "Verification: write 3 SystemVerilog assertions for the FIFO from last week"
+        cat: verif
+      - text: "Review pipeline hazards (RAW/WAR/WAW) using the EEL processor as the example"
+        cat: arch
+
+  - id: 2026-w26
+    label: "Week of Jun 22"
+    title: "Warm-up / tooling"
+    focus: "Example of a completed week — copy this block to add new weeks."
+    items:
+      - text: "Set up local sky130 + OpenLane docker and run the inverter example"
+        cat: eda
+      - text: "Refresh Verilog blocking vs non-blocking assignment rules"
+        cat: rtl
+      - text: "Read one Semiconductor Engineering article on chiplets/advanced packaging"
+        cat: papers
+        resources:
+          - { label: "SemiEngineering", url: "https://semiengineering.com/" }

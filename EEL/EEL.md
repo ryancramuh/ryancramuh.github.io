@@ -1,6 +1,6 @@
 ---
 title: EEL Processor
-nav_order: 7
+nav_order: 11
 ---
 # EEL Processor
 ## [EEL Github Repo](https://github.com/ryancramuh/EEL) 

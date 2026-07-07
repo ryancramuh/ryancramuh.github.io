@@ -1,0 +1,93 @@
+# =============================================================================
+# events.yml  —  data source for the Industry Events page (/events.html)
+# -----------------------------------------------------------------------------
+# AUTOMATED REFRESH TARGET.  A scheduled agent re-researches semiconductor /
+# RTL / physical-design / ASIC events and OVERWRITES the `events:` list below.
+# The events.html page is a pure template — it only reads this file — so the
+# refresh job never has to touch HTML. Keep the schema stable.
+#
+# INCLUSION FILTER (do not add events that fail this):
+#   Include an event ONLY IF it is EITHER
+#     (a) online / virtual / livestreamed, OR
+#     (b) in-person within ~1 hour driving of San Jose, CA
+#         (San Jose, Santa Clara, Sunnyvale, Palo Alto, Milpitas, Fremont,
+#          San Francisco, Berkeley, Mountain View, Cupertino all qualify).
+#   Drop events whose date is in the past relative to the refresh date.
+#   Prefer RTL / verification / physical design / ASIC / EDA / architecture /
+#   semiconductor-process relevance. Sort soonest-first.
+#
+# SCHEMA (every field is a plain string unless noted)
+#   refreshed: "YYYY-MM-DD"     # set to the date the list was last regenerated
+#   events:                      # LIST — this is the part the agent overwrites
+#     - name:  "<event name>"                REQUIRED
+#       date:  "<YYYY-MM-DD>"                REQUIRED, start date, ISO. Used for
+#                                            #  sorting AND to render the date chip.
+#       date_display: "<human range>"        optional, e.g. "Aug 23-25, 2026".
+#                                            #  Falls back to `date` if omitted.
+#       mode:  online | local               REQUIRED. "local" = in-person Bay Area,
+#                                            #  "online" = virtual/livestream/hybrid.
+#       location: "<venue, city>" or "Online"  REQUIRED
+#       url:   "<https link>"               REQUIRED
+#       desc:  "<one-line description>"      REQUIRED
+#       tags:  [rtl, pd, asic, verif, arch, eda, papers]   optional list
+#       tentative: true                     optional; set when the date is not yet
+#                                            #  officially confirmed (renders a note).
+# =============================================================================
+
+refreshed: "2026-07-06"
+
+events:
+  - name: "Hot Chips 2026 (Symposium on High-Performance Chips)"
+    date: "2026-08-23"
+    date_display: "Aug 23-25, 2026"
+    mode: local
+    location: "Memorial Auditorium, Stanford — Palo Alto, CA (hybrid, livestream available)"
+    url: "https://hotchips.org/"
+    desc: "Industry's marquee microarchitecture symposium — CPUs, GPUs, AI accelerators and SoCs presented by the teams that built them."
+    tags: [arch, asic]
+
+  - name: "SEMICON West 2026"
+    date: "2026-10-13"
+    date_display: "Oct 13-15, 2026"
+    mode: local
+    location: "Moscone Center — San Francisco, CA"
+    url: "https://www.semiconwest.org/"
+    desc: "The global microelectronics ecosystem: advanced packaging, process, AI-driven manufacturing and the road to a $1T industry."
+    tags: [asic, pd]
+
+  - name: "RISC-V Summit North America 2026"
+    date: "2026-10-20"
+    date_display: "Oct 2026 (dates to be confirmed)"
+    mode: local
+    location: "Santa Clara Convention Center — Santa Clara, CA"
+    url: "https://events.linuxfoundation.org/riscv-summit/"
+    desc: "The open-ISA community's flagship event — cores, toolchains, verification and silicon built on RISC-V."
+    tags: [rtl, arch]
+    tentative: true
+
+  - name: "Cadence Webinar — A Beginner's Guide to the RTL-to-GDSII Front-End Flow"
+    date: "2026-07-06"
+    date_display: "Online / on-demand"
+    mode: online
+    location: "Online"
+    url: "https://community.cadence.com/cadence_blogs_8/b/di/posts/technical-webinar-a-beginner-s-guide-to-rtl-to-gdsii-front-end-flow"
+    desc: "Free technical webinar walking the digital implementation flow from RTL through synthesis to layout."
+    tags: [asic, eda]
+
+  - name: "ISSCC 2027 (IEEE International Solid-State Circuits Conference)"
+    date: "2027-02-14"
+    date_display: "Feb 14-18, 2027"
+    mode: local
+    location: "San Francisco Marriott Marquis — San Francisco, CA"
+    url: "https://www.isscc.org/"
+    desc: "The premier forum for solid-state circuit and SoC innovation — the 'chip Olympics' of published silicon."
+    tags: [asic, arch, papers]
+
+  - name: "DVCon U.S. 2027 (Design & Verification Conference)"
+    date: "2027-03-01"
+    date_display: "Mar 1-4, 2027"
+    mode: local
+    location: "Hyatt Regency Santa Clara — Santa Clara, CA"
+    url: "https://dvcon.org/"
+    desc: "The definitive conference on languages, tools and methodology for functional verification (UVM, SystemVerilog, formal)."
+    tags: [verif, rtl, eda]

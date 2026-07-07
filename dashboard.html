@@ -1,0 +1,123 @@
+---
+layout: default
+title: Study Dashboard
+nav_order: 2
+---
+<!--
+  Weekly Study Dashboard — renders entirely from _data/study.yml.
+  To change content, edit that YAML file, NOT this template.
+  Checkbox state persists per-user in localStorage (static-host friendly).
+-->
+
+<div class="chip-eyebrow">taskboard // chip-design study queue</div>
+<h1>Weekly Study Dashboard</h1>
+<p style="color:var(--chip-muted);max-width:64ch;">
+  A rotating queue of RTL, physical-design, ASIC-flow and verification topics to grind
+  through each week. Check items off as you go — progress is saved in your browser.
+  Data lives in <code>_data/study.yml</code>.
+</p>
+
+<div class="chip-panel study-toolbar">
+  <div class="chip-stats" style="flex:1 1 auto;">
+    <div class="chip-stat"><div class="chip-stat__num" id="stat-total">0</div><div class="chip-stat__lbl">Tasks</div></div>
+    <div class="chip-stat"><div class="chip-stat__num" id="stat-done">0</div><div class="chip-stat__lbl">Completed</div></div>
+    <div class="chip-stat"><div class="chip-stat__num" id="stat-pct">0%</div><div class="chip-stat__lbl">Overall</div></div>
+  </div>
+  <div class="study-legend">
+    <span class="chip-tag" data-cat="rtl">RTL</span>
+    <span class="chip-tag" data-cat="pd">PD</span>
+    <span class="chip-tag" data-cat="asic">ASIC</span>
+    <span class="chip-tag" data-cat="verif">VERIF</span>
+    <span class="chip-tag" data-cat="arch">ARCH</span>
+    <span class="chip-tag" data-cat="eda">EDA</span>
+    <span class="chip-tag" data-cat="papers">PAPERS</span>
+  </div>
+</div>
+
+<div class="study-weeks">
+  {% for week in site.data.study.weeks %}
+  <section class="chip-panel study-week" data-week="{{ week.id }}">
+    <header class="study-week__head">
+      <div>
+        <div class="study-week__label">{{ week.label }}</div>
+        <div class="study-week__title">{{ week.title }}</div>
+        {% if week.focus %}<div class="study-week__focus">{{ week.focus }}</div>{% endif %}
+      </div>
+      <div class="study-week__prog">
+        <div class="study-week__pct" data-pct-for="{{ week.id }}">0%</div>
+        <div class="chip-meter"><span data-meter-for="{{ week.id }}" style="width:0%"></span></div>
+      </div>
+    </header>
+    <ul class="study-list">
+      {% for item in week.items %}
+      <li class="study-item">
+        <input class="study-check" type="checkbox"
+               id="study:{{ week.id }}:{{ forloop.index0 }}"
+               data-week="{{ week.id }}">
+        <label class="study-item__body" for="study:{{ week.id }}:{{ forloop.index0 }}">
+          <div class="study-item__top">
+            <span class="chip-tag" data-cat="{{ item.cat }}">{{ item.cat | upcase }}</span>
+            <span class="study-item__title">{{ item.text }}</span>
+          </div>
+          {% if item.note %}<div class="study-item__note">{{ item.note }}</div>{% endif %}
+          {% if item.resources %}
+          <div class="study-item__links">
+            {% for r in item.resources %}
+            <a class="study-res" href="{{ r.url }}" target="_blank" rel="noopener" onclick="event.stopPropagation();">{{ r.label }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </label>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
+
+<p class="chip-note">
+  Edit <code>_data/study.yml</code> to add a week or task. Each week needs a stable
+  unique <code>id</code>; renaming it resets that week's saved checkmarks.
+</p>
+
+<script>
+(function () {
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('.study-check'));
+
+  function apply(box) {
+    var on = localStorage.getItem(box.id) === '1';
+    box.checked = on;
+    box.closest('.study-item').classList.toggle('is-done', on);
+  }
+  function recalc() {
+    var total = boxes.length, done = 0;
+    var perWeek = {};
+    boxes.forEach(function (b) {
+      var w = b.dataset.week;
+      perWeek[w] = perWeek[w] || { t: 0, d: 0 };
+      perWeek[w].t++;
+      if (b.checked) { done++; perWeek[w].d++; }
+    });
+    document.getElementById('stat-total').textContent = total;
+    document.getElementById('stat-done').textContent = done;
+    document.getElementById('stat-pct').textContent = total ? Math.round(done / total * 100) + '%' : '0%';
+    Object.keys(perWeek).forEach(function (w) {
+      var p = perWeek[w].t ? Math.round(perWeek[w].d / perWeek[w].t * 100) : 0;
+      var pct = document.querySelector('[data-pct-for="' + CSS.escape(w) + '"]');
+      var mtr = document.querySelector('[data-meter-for="' + CSS.escape(w) + '"]');
+      if (pct) pct.textContent = p + '%';
+      if (mtr) mtr.style.width = p + '%';
+    });
+  }
+
+  boxes.forEach(function (box) {
+    apply(box);
+    box.addEventListener('change', function () {
+      localStorage.setItem(box.id, box.checked ? '1' : '0');
+      box.closest('.study-item').classList.toggle('is-done', box.checked);
+      recalc();
+    });
+  });
+  recalc();
+})();
+</script>
