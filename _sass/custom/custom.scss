@@ -360,7 +360,34 @@ a.chip-card:hover {
 // -----------------------------------------------------------------------------
 // Industry Events
 // -----------------------------------------------------------------------------
-.event-list { display: grid; gap: .9rem; margin: 1.2rem 0; }
+
+// Weekly buckets — each week gets a sticky-ish header + its own event list
+.event-weeks { display: grid; gap: 1.6rem; margin: 1.4rem 0; }
+.event-week { display: block; }
+.event-week__head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: .5rem .9rem;
+  padding-bottom: .5rem; margin-bottom: .1rem;
+  border-bottom: 1px solid var(--chip-border);
+}
+.event-week__title {
+  display: flex; align-items: center; gap: .6rem;
+  font-family: var(--chip-mono); font-size: .95rem; letter-spacing: .02em;
+  color: var(--chip-heading); font-weight: 600;
+}
+.event-week.is-current .event-week__title { color: var(--chip-cyan-hi); }
+.event-week__meta {
+  display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+  font-family: var(--chip-mono); font-size: .72rem; color: var(--chip-muted);
+}
+.event-week.is-current {
+  position: relative;
+  padding-left: 1rem;
+  border-left: 2px solid var(--chip-cyan-dim);
+  margin-left: -1rem;
+}
+
+.event-list { display: grid; gap: .9rem; margin: .9rem 0 0; }
 .event-card {
   display: grid; grid-template-columns: 84px 1fr auto; gap: 1rem; align-items: center;
   padding: .95rem 1.1rem;
@@ -406,8 +433,69 @@ a.chip-card:hover {
 // -----------------------------------------------------------------------------
 // Responsive
 // -----------------------------------------------------------------------------
+@media (max-width: 900px) {
+  // Give card grids room to breathe on tablets before they collapse
+  .chip-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+}
 @media (max-width: 700px) {
-  .event-card { grid-template-columns: 64px 1fr; }
+  .chip-hero { padding: 1.5rem 1.15rem 1.6rem; }
+  .chip-hero h1 { font-size: 1.55rem; }
+  .chip-hero p, .chip-hero__meta { max-width: 100%; }
+  .event-card { grid-template-columns: 56px 1fr; gap: .8rem; }
   .event-cta { grid-column: 2; justify-self: start; }
-  .chip-hero h1 { font-size: 1.6rem; }
+  .event-week__head { align-items: flex-start; }
+  .study-weeks { grid-template-columns: 1fr; }
+  .study-legend { margin-left: 0; }
+}
+@media (max-width: 460px) {
+  .chip-grid { grid-template-columns: 1fr; }
+  .chip-hero h1 { font-size: 1.4rem; }
+  .chip-stat__num { font-size: 1.5rem; }
+}
+
+// -----------------------------------------------------------------------------
+// Polish pass — accessibility, motion safety, focus states, small consistency
+// fixes that apply across every page (markdown + raw HTML).
+// -----------------------------------------------------------------------------
+html { scroll-behavior: smooth; }
+
+// Keyboard focus: a clear cyan ring on every interactive chip element, without
+// clobbering mouse-click styling (:focus-visible only).
+.chip-card:focus-visible,
+.event-cta:focus-visible,
+.event-name a:focus-visible,
+.study-res:focus-visible,
+.chip-hero a:focus-visible,
+.main-content a:focus-visible {
+  outline: 2px solid var(--chip-cyan);
+  outline-offset: 2px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.study-check:focus-visible {
+  outline: 2px solid var(--chip-cyan);
+  outline-offset: 2px;
+}
+
+// Selection color that matches the interconnect accent
+::selection { background: rgba(56,214,240,.28); color: var(--chip-heading); }
+
+// Custom scrollbar to stay on-theme in dark surfaces (WebKit + Firefox)
+* { scrollbar-color: var(--chip-border-2) transparent; scrollbar-width: thin; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb {
+  background: var(--chip-border-2); border-radius: 999px;
+  border: 2px solid var(--chip-bg);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--chip-cyan-dim); }
+
+// Respect users who ask for less motion — kill transforms, blink, transitions
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  a.chip-card:hover { transform: none; }
 }

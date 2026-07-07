@@ -37,8 +37,8 @@ nav_order: 1
   <a class="chip-card" href="{{ '/events.html' | relative_url }}">
     <div class="chip-card__kicker">calendar</div>
     <div class="chip-card__title">Industry Events</div>
-    <div class="chip-card__desc">Upcoming semiconductor / EDA events — online or within an hour of San Jose.</div>
-    <div class="chip-card__tags"><span class="chip-tag" data-cat="arch">conferences</span><span class="chip-tag" data-cat="eda">webinars</span></div>
+    <div class="chip-card__desc">A weekly feed of semiconductor / EDA meetups, webinars and conferences — online or within an hour of San Jose.</div>
+    <div class="chip-card__tags"><span class="chip-tag" data-cat="eda">weekly</span><span class="chip-tag" data-cat="arch">meetups</span></div>
   </a>
   <a class="chip-card" href="{{ '/schedule.html' | relative_url }}">
     <div class="chip-card__kicker">schedule</div>
@@ -112,5 +112,5 @@ nav_order: 1
 <div class="chip-eyebrow">schedule // this week</div>
 
 <div class="chip-panel chip-cal">
-  <iframe src="https://calendar.google.com/calendar/embed?src=ngc9dfl0qm68j5cfmkcugkabjb8ra03k%40import.calendar.google.com&ctz=America%2FLos_Angeles" style="border:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <iframe src="https://calendar.google.com/calendar/embed?src=ngc9dfl0qm68j5cfmkcugkabjb8ra03k%40import.calendar.google.com&ctz=America%2FLos_Angeles" style="border:0" width="800" height="600" frameborder="0" scrolling="no" loading="lazy" title="Ryan's weekly calendar"></iframe>
 </div>

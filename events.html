@@ -6,48 +6,73 @@ nav_order: 3
 <!--
   Industry Events — renders entirely from _data/events.yml.
   A scheduled agent re-researches and overwrites the `events:` list in that file
-  weekly. This template only reads it; see the header of events.yml for the
-  schema and the inclusion filter (online OR within ~1hr of San Jose, CA).
+  weekly. This template only reads it. Events are grouped into WEEKLY buckets by
+  their `week_of` field; see the header of events.yml for the schema and the
+  inclusion filter (online OR within ~1hr of San Jose, CA).
 -->
 
 <div class="chip-eyebrow">calendar // RTL · PD · ASIC · semiconductor</div>
 <h1>Industry Events</h1>
 <p style="color:var(--chip-muted);max-width:66ch;">
-  Upcoming semiconductor and chip-design events that are either
+  A <strong>weekly</strong> feed of semiconductor and chip-design events that are either
   <span style="color:var(--chip-green)">online</span> or
-  <span style="color:var(--chip-copper)">within ~1 hour of San Jose, CA</span>.
+  <span style="color:var(--chip-copper)">within ~1 hour of San Jose, CA</span> —
+  meetups, EDA webinars, seminars and the marquee conferences.
   Auto-refreshed from <code>_data/events.yml</code> —
   last updated <strong>{{ site.data.events.refreshed }}</strong>.
 </p>
 
 {% assign evs = site.data.events.events | sort: "date" %}
-<div class="event-list">
-  {% for e in evs %}
-  <article class="chip-panel event-card">
-    <div class="event-date">
-      <div class="event-date__mon">{{ e.date | date: "%b" }}</div>
-      <div class="event-date__day">{{ e.date | date: "%-d" }}</div>
-      <div class="event-date__yr">{{ e.date | date: "%Y" }}</div>
-    </div>
-    <div class="event-main">
-      <div class="event-name"><a href="{{ e.url }}" target="_blank" rel="noopener">{{ e.name }}</a></div>
-      <div class="event-desc">{{ e.desc }}</div>
-      <div class="event-meta">
-        <span class="event-loc" data-mode="{{ e.mode }}">
-          {% if e.mode == "online" %}◇ {% else %}◆ {% endif %}{{ e.location }}
-        </span>
-        <span class="event-loc">{{ e.date_display | default: e.date }}</span>
-        {% if e.tentative %}<span class="chip-status" data-st="doing">date TBC</span>{% endif %}
-        {% for t in e.tags %}<span class="chip-tag" data-cat="{{ t }}">{{ t | upcase }}</span>{% endfor %}
+{% assign weekgroups = evs | group_by: "week_of" | sort: "name" %}
+
+<div class="event-weeks">
+  {% for wk in weekgroups %}
+  {% assign online_count = wk.items | where: "mode", "online" | size %}
+  {% assign local_count = wk.items | where: "mode", "local" | size %}
+  <section class="event-week{% if wk.name == site.data.events.this_week %} is-current{% endif %}">
+    <header class="event-week__head">
+      <div class="event-week__title">
+        {{ wk.name | date: "Week of %b %-d, %Y" }}
+        {% if wk.name == site.data.events.this_week %}<span class="chip-status" data-st="doing">This week</span>{% endif %}
       </div>
+      <div class="event-week__meta">
+        <span>{{ wk.items | size }} event{% if wk.items.size != 1 %}s{% endif %}</span>
+        {% if online_count > 0 %}<span class="event-loc" data-mode="online">◇ {{ online_count }} online</span>{% endif %}
+        {% if local_count > 0 %}<span class="event-loc" data-mode="local">◆ {{ local_count }} local</span>{% endif %}
+      </div>
+    </header>
+
+    <div class="event-list">
+      {% for e in wk.items %}
+      <article class="chip-panel event-card">
+        <div class="event-date">
+          <div class="event-date__mon">{{ e.date | date: "%b" }}</div>
+          <div class="event-date__day">{{ e.date | date: "%-d" }}</div>
+          <div class="event-date__yr">{{ e.date | date: "%Y" }}</div>
+        </div>
+        <div class="event-main">
+          <div class="event-name"><a href="{{ e.url }}" target="_blank" rel="noopener">{{ e.name }}</a></div>
+          <div class="event-desc">{{ e.desc }}</div>
+          <div class="event-meta">
+            <span class="event-loc" data-mode="{{ e.mode }}">
+              {% if e.mode == "online" %}◇ {% else %}◆ {% endif %}{{ e.location }}
+            </span>
+            <span class="event-loc">{{ e.date_display | default: e.date }}</span>
+            {% if e.tentative %}<span class="chip-status" data-st="doing">date TBC</span>{% endif %}
+            {% for t in e.tags %}<span class="chip-tag" data-cat="{{ t }}">{{ t | upcase }}</span>{% endfor %}
+          </div>
+        </div>
+        <a class="event-cta" href="{{ e.url }}" target="_blank" rel="noopener">Details →</a>
+      </article>
+      {% endfor %}
     </div>
-    <a class="event-cta" href="{{ e.url }}" target="_blank" rel="noopener">Details →</a>
-  </article>
+  </section>
   {% endfor %}
 </div>
 
 <p class="chip-note">
   Source of truth: <code>_data/events.yml</code>. Each entry needs
-  <code>name, date (YYYY-MM-DD), mode (online|local), location, url, desc</code>.
-  The filter rule and full schema are documented at the top of that file.
+  <code>name, date (YYYY-MM-DD), week_of (Monday, YYYY-MM-DD), mode (online|local),
+  location, url, desc</code>. Events group into weekly buckets by <code>week_of</code>;
+  the filter rule and full schema are documented at the top of that file.
 </p>

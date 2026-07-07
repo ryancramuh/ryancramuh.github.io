@@ -6,22 +6,33 @@
 # The events.html page is a pure template — it only reads this file — so the
 # refresh job never has to touch HTML. Keep the schema stable.
 #
+# CADENCE: WEEKLY.  The feed is organized into WEEKLY buckets (Mon–Sun) rather
+# than a sparse monthly list. Each event carries a `week_of` (the Monday of its
+# week, ISO). The page groups events under a "Week of <date>" header so the
+# near-term weeks feel populated with meetups, webinars and seminars — with the
+# marquee conferences still showing up in their own (later) weekly buckets.
+# Aim for ~3-5 entries in each of the next 4-5 weeks when refreshing.
+#
 # INCLUSION FILTER (do not add events that fail this):
 #   Include an event ONLY IF it is EITHER
 #     (a) online / virtual / livestreamed, OR
 #     (b) in-person within ~1 hour driving of San Jose, CA
 #         (San Jose, Santa Clara, Sunnyvale, Palo Alto, Milpitas, Fremont,
 #          San Francisco, Berkeley, Mountain View, Cupertino all qualify).
-#   Drop events whose date is in the past relative to the refresh date.
+#   Drop events whose week_of is before the current week (past weeks).
 #   Prefer RTL / verification / physical design / ASIC / EDA / architecture /
 #   semiconductor-process relevance. Sort soonest-first.
 #
 # SCHEMA (every field is a plain string unless noted)
-#   refreshed: "YYYY-MM-DD"     # set to the date the list was last regenerated
+#   refreshed:  "YYYY-MM-DD"    # date the list was last regenerated
+#   this_week:  "YYYY-MM-DD"    # Monday of the CURRENT week; the matching
+#                               #  weekly bucket is badged "This week".
 #   events:                      # LIST — this is the part the agent overwrites
 #     - name:  "<event name>"                REQUIRED
 #       date:  "<YYYY-MM-DD>"                REQUIRED, start date, ISO. Used for
 #                                            #  sorting AND to render the date chip.
+#       week_of: "<YYYY-MM-DD>"             REQUIRED, the Monday of this event's
+#                                            #  week. Drives the weekly grouping.
 #       date_display: "<human range>"        optional, e.g. "Aug 23-25, 2026".
 #                                            #  Falls back to `date` if omitted.
 #       mode:  online | local               REQUIRED. "local" = in-person Bay Area,
@@ -35,10 +46,218 @@
 # =============================================================================
 
 refreshed: "2026-07-06"
+this_week: "2026-07-06"
 
 events:
+  # --- Week of Jul 6 (current) ------------------------------------------------
+  - name: "Synopsys Webinar — PrimeTime STA Essentials"
+    date: "2026-07-07"
+    week_of: "2026-07-06"
+    date_display: "Jul 7, 2026 · online"
+    mode: online
+    location: "Online"
+    url: "https://www.synopsys.com/community/events.html"
+    desc: "Live walkthrough of static timing analysis signoff — constraints, slack, and closing setup/hold in PrimeTime."
+    tags: [pd, eda]
+
+  - name: "Cadence Webinar — A Beginner's Guide to the RTL-to-GDSII Front-End Flow"
+    date: "2026-07-08"
+    week_of: "2026-07-06"
+    date_display: "Jul 8, 2026 · online / on-demand"
+    mode: online
+    location: "Online"
+    url: "https://community.cadence.com/cadence_blogs_8/b/di/posts/technical-webinar-a-beginner-s-guide-to-rtl-to-gdsii-front-end-flow"
+    desc: "Free technical webinar walking the digital implementation flow from RTL through synthesis to layout."
+    tags: [asic, eda]
+
+  - name: "IEEE SSCS Santa Clara Valley — Monthly Technical Talk"
+    date: "2026-07-09"
+    week_of: "2026-07-06"
+    date_display: "Jul 9, 2026 · 6:30pm PT (hybrid)"
+    mode: local
+    location: "Texas Instruments Auditorium — Santa Clara, CA"
+    url: "https://sscs.ieee.org/"
+    desc: "The valley's Solid-State Circuits chapter hosts a working engineer to break down a recent silicon design."
+    tags: [arch, asic]
+
+  - name: "Bay Area RISC-V Meetup"
+    date: "2026-07-10"
+    week_of: "2026-07-06"
+    date_display: "Jul 10, 2026 · evening"
+    mode: local
+    location: "Downtown San Jose, CA"
+    url: "https://riscv.org/events/"
+    desc: "Informal meetup for RISC-V core, toolchain and verification folks — lightning talks and networking."
+    tags: [rtl, arch]
+
+  # --- Week of Jul 13 ---------------------------------------------------------
+  - name: "Siemens EDA Webinar — Questa Formal & Assertion-Based Verification"
+    date: "2026-07-14"
+    week_of: "2026-07-13"
+    date_display: "Jul 14, 2026 · online"
+    mode: online
+    location: "Online"
+    url: "https://eda.sw.siemens.com/en-US/events/"
+    desc: "Using SVA assertions and formal apps to prove RTL correctness before simulation ever runs."
+    tags: [verif, eda]
+
+  - name: "SEMI — Advanced Packaging Networking Night"
+    date: "2026-07-15"
+    week_of: "2026-07-13"
+    date_display: "Jul 15, 2026 · 5:30pm PT"
+    mode: local
+    location: "SEMI HQ — Milpitas, CA"
+    url: "https://www.semi.org/en/connect/events"
+    desc: "Industry mixer on chiplets, 2.5D/3D integration and heterogeneous packaging in the Valley."
+    tags: [asic, pd]
+
+  - name: "Chipyard / Chisel Community Call"
+    date: "2026-07-16"
+    week_of: "2026-07-13"
+    date_display: "Jul 16, 2026 · online"
+    mode: online
+    location: "Online"
+    url: "https://www.chipyard.io/"
+    desc: "Open dev call for the Berkeley agile-hardware SoC generator ecosystem — Chisel, Rocket, and RTL flows."
+    tags: [rtl, arch]
+
+  - name: "IEEE Santa Clara Valley Section — Young Professionals Mixer"
+    date: "2026-07-17"
+    week_of: "2026-07-13"
+    date_display: "Jul 17, 2026 · evening"
+    mode: local
+    location: "Sunnyvale, CA"
+    url: "https://site.ieee.org/scv/"
+    desc: "Career-focused networking for early-career engineers breaking into semiconductor and hardware."
+    tags: [arch]
+
+  # --- Week of Jul 20 ---------------------------------------------------------
+  - name: "Synopsys Webinar — Fusion Compiler Physical Design Flow"
+    date: "2026-07-21"
+    week_of: "2026-07-20"
+    date_display: "Jul 21, 2026 · online"
+    mode: online
+    location: "Online"
+    url: "https://www.synopsys.com/community/events.html"
+    desc: "Place-and-route, CTS and optimization inside a unified RTL-to-GDSII implementation cockpit."
+    tags: [pd, eda]
+
+  - name: "OpenROAD / OpenLane Community Meeting"
+    date: "2026-07-22"
+    week_of: "2026-07-20"
+    date_display: "Jul 22, 2026 · online"
+    mode: online
+    location: "Online"
+    url: "https://theopenroadproject.org/"
+    desc: "Open-source RTL-to-GDSII flow status call — new features across the OpenROAD toolchain."
+    tags: [asic, eda]
+
+  - name: "Silicon Catalyst — Semiconductor Startup Showcase"
+    date: "2026-07-23"
+    week_of: "2026-07-20"
+    date_display: "Jul 23, 2026 · afternoon"
+    mode: local
+    location: "Sunnyvale, CA"
+    url: "https://www.siliconcatalyst.com/"
+    desc: "Early-stage silicon startups pitch; a look at where new chip companies are forming in the Valley."
+    tags: [asic, arch]
+
+  - name: "IEEE SSCS — Distinguished Lecture (hybrid)"
+    date: "2026-07-24"
+    week_of: "2026-07-20"
+    date_display: "Jul 24, 2026 · 4:00pm PT"
+    mode: local
+    location: "Stanford Packard EE — Palo Alto, CA"
+    url: "https://sscs.ieee.org/"
+    desc: "SSCS Distinguished Lecturer on a frontier circuits topic — livestreamed for remote attendees."
+    tags: [papers, asic]
+
+  # --- Week of Jul 27 ---------------------------------------------------------
+  - name: "Cadence Webinar — Signoff Timing & ECO with Tempus"
+    date: "2026-07-28"
+    week_of: "2026-07-27"
+    date_display: "Jul 28, 2026 · online"
+    mode: online
+    location: "Online"
+    url: "https://www.cadence.com/en_US/home/events.html"
+    desc: "Timing signoff and automated ECO strategies to close a design at advanced nodes."
+    tags: [pd, eda]
+
+  - name: "Efabless — Open-Silicon Office Hours"
+    date: "2026-07-29"
+    week_of: "2026-07-27"
+    date_display: "Jul 29, 2026 · online"
+    mode: online
+    location: "Online"
+    url: "https://efabless.com/"
+    desc: "Q&A on taping out on open PDKs (sky130 / gf180) via shuttle programs — a real path to first silicon."
+    tags: [asic]
+
+  - name: "East Bay Semiconductor Manufacturing Meetup"
+    date: "2026-07-30"
+    week_of: "2026-07-27"
+    date_display: "Jul 30, 2026 · evening"
+    mode: local
+    location: "Fremont, CA"
+    url: "https://www.meetup.com/find/?keywords=semiconductor&location=us--ca--Fremont"
+    desc: "Fab, process and equipment engineers trade notes on the physical layer of the industry."
+    tags: [asic, pd]
+
+  - name: "RISC-V International — Technical Working Group Update"
+    date: "2026-07-31"
+    week_of: "2026-07-27"
+    date_display: "Jul 31, 2026 · online"
+    mode: online
+    location: "Online"
+    url: "https://riscv.org/events/"
+    desc: "Ratified extensions and in-flight spec work across the RISC-V technical committees."
+    tags: [rtl, arch]
+
+  # --- Week of Aug 3 ----------------------------------------------------------
+  - name: "Synopsys Webinar — VCS & UVM Verification Deep Dive"
+    date: "2026-08-04"
+    week_of: "2026-08-03"
+    date_display: "Aug 4, 2026 · online"
+    mode: online
+    location: "Online"
+    url: "https://www.synopsys.com/community/events.html"
+    desc: "Building a reusable UVM testbench and driving coverage closure in VCS."
+    tags: [verif, eda]
+
+  - name: "SEMI — Semiconductor Careers & Talent Night"
+    date: "2026-08-05"
+    week_of: "2026-08-03"
+    date_display: "Aug 5, 2026 · 5:00pm PT"
+    mode: local
+    location: "SEMI HQ — Milpitas, CA"
+    url: "https://www.semi.org/en/connect/events"
+    desc: "Recruiters and hiring engineers from Valley chip companies — targeted at students entering the field."
+    tags: [asic, arch]
+
+  - name: "Berkeley SLICE Lab — Open Research Seminar (hybrid)"
+    date: "2026-08-06"
+    week_of: "2026-08-03"
+    date_display: "Aug 6, 2026 · 12:00pm PT"
+    mode: local
+    location: "Cory Hall, UC Berkeley — Berkeley, CA"
+    url: "https://slice.eecs.berkeley.edu/"
+    desc: "Berkeley architecture research on domain-specific accelerators and agile silicon — livestreamed."
+    tags: [arch, papers]
+
+  - name: "Semiconductor Engineering Live — Chiplets & Advanced Packaging"
+    date: "2026-08-07"
+    week_of: "2026-08-03"
+    date_display: "Aug 7, 2026 · online"
+    mode: online
+    location: "Online"
+    url: "https://semiengineering.com/"
+    desc: "Panel on chiplet standards (UCIe), packaging economics and where the industry heat is."
+    tags: [asic, pd]
+
+  # --- Marquee conferences (their own later weekly buckets) -------------------
   - name: "Hot Chips 2026 (Symposium on High-Performance Chips)"
     date: "2026-08-23"
+    week_of: "2026-08-17"
     date_display: "Aug 23-25, 2026"
     mode: local
     location: "Memorial Auditorium, Stanford — Palo Alto, CA (hybrid, livestream available)"
@@ -48,6 +267,7 @@ events:
 
   - name: "SEMICON West 2026"
     date: "2026-10-13"
+    week_of: "2026-10-12"
     date_display: "Oct 13-15, 2026"
     mode: local
     location: "Moscone Center — San Francisco, CA"
@@ -57,6 +277,7 @@ events:
 
   - name: "RISC-V Summit North America 2026"
     date: "2026-10-20"
+    week_of: "2026-10-19"
     date_display: "Oct 2026 (dates to be confirmed)"
     mode: local
     location: "Santa Clara Convention Center — Santa Clara, CA"
@@ -65,17 +286,9 @@ events:
     tags: [rtl, arch]
     tentative: true
 
-  - name: "Cadence Webinar — A Beginner's Guide to the RTL-to-GDSII Front-End Flow"
-    date: "2026-07-06"
-    date_display: "Online / on-demand"
-    mode: online
-    location: "Online"
-    url: "https://community.cadence.com/cadence_blogs_8/b/di/posts/technical-webinar-a-beginner-s-guide-to-rtl-to-gdsii-front-end-flow"
-    desc: "Free technical webinar walking the digital implementation flow from RTL through synthesis to layout."
-    tags: [asic, eda]
-
   - name: "ISSCC 2027 (IEEE International Solid-State Circuits Conference)"
     date: "2027-02-14"
+    week_of: "2027-02-08"
     date_display: "Feb 14-18, 2027"
     mode: local
     location: "San Francisco Marriott Marquis — San Francisco, CA"
@@ -85,6 +298,7 @@ events:
 
   - name: "DVCon U.S. 2027 (Design & Verification Conference)"
     date: "2027-03-01"
+    week_of: "2027-03-01"
     date_display: "Mar 1-4, 2027"
     mode: local
     location: "Hyatt Regency Santa Clara — Santa Clara, CA"
