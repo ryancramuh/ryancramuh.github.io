@@ -118,7 +118,13 @@ Return ONLY a JSON array (no prose, no markdown fence) of event objects:
 
 
 def call_claude(prompt):
-    client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    if not key:
+        sys.exit(
+            "ERROR: ANTHROPIC_API_KEY is empty. Set the repo secret "
+            "(Settings -> Secrets and variables -> Actions) to a real key."
+        )
+    client = Anthropic(api_key=key)
     resp = client.messages.create(
         model=MODEL,
         max_tokens=8000,
