@@ -2,33 +2,35 @@
 """
 Weekly refresh for _data/events.yml.
 
-Runs in CI (see .github/workflows/refresh-events.yml). Asks Claude — with the
-server-side web_search tool — to re-research semiconductor / RTL / physical-
-design / ASIC / EDA events that are EITHER online OR in-person within ~1hr of
-San Jose, CA, then rewrites _data/events.yml as weekly (Mon-Sun) buckets.
+Runs in CI (see .github/workflows/refresh-events.yml). Drives the Claude Code
+CLI headless (`claude -p`) with its WebSearch tool — authenticated by a Claude
+subscription OAuth token, NOT a pay-as-you-go API key — to re-research
+semiconductor / RTL / physical-design / ASIC / EDA events that are EITHER online
+OR in-person within ~1hr of San Jose, CA, then rewrites _data/events.yml as
+weekly (Mon-Sun) buckets.
 
 The events.html page is a pure template over this file, so we only ever touch
 this one data file. If Claude returns nothing usable, the existing file is left
 untouched (the workflow then commits nothing).
 
 Env:
-  ANTHROPIC_API_KEY   required
-  EVENTS_MODEL        optional, defaults to a current Claude model
+  CLAUDE_CODE_OAUTH_TOKEN   required; from `claude setup-token` (Pro/Max plan)
+  EVENTS_MODEL              optional; Claude Code model alias (default "sonnet")
 """
 
 import json
 import os
 import re
+import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
 
 import yaml
-from anthropic import Anthropic
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 EVENTS_PATH = os.path.join(REPO_ROOT, "_data", "events.yml")
 
-MODEL = os.environ.get("EVENTS_MODEL", "claude-sonnet-5")
+MODEL = os.environ.get("EVENTS_MODEL", "sonnet")
 
 # The comment header is the schema contract for the file. Kept here so the
 # generated file is always self-documenting and stable.
@@ -58,7 +60,8 @@ HEADER = """\
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # ============================================================================="""
 
-REQUIRED_FIELDS = ("name", "date", "week_of", "mode", "location", "url", "desc")
+# week_of is intentionally NOT required — it is always derived from `date`.
+REQUIRED_FIELDS = ("name", "date", "mode", "location", "url", "desc")
 VALID_TAGS = {"rtl", "pd", "asic", "verif", "arch", "eda", "papers"}
 
 
@@ -118,22 +121,32 @@ Return ONLY a JSON array (no prose, no markdown fence) of event objects:
 
 
 def call_claude(prompt):
-    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-    if not key:
+    token = os.environ.get("CLAUDE_CODE_OAUTH_TOKEN", "").strip()
+    if not token:
         sys.exit(
-            "ERROR: ANTHROPIC_API_KEY is empty. Set the repo secret "
-            "(Settings -> Secrets and variables -> Actions) to a real key."
+            "ERROR: CLAUDE_CODE_OAUTH_TOKEN is empty. Run `claude setup-token` "
+            "(needs a Claude Pro/Max plan) and store the result as the repo secret."
         )
-    client = Anthropic(api_key=key)
-    resp = client.messages.create(
-        model=MODEL,
-        max_tokens=8000,
-        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 8}],
-        messages=[{"role": "user", "content": prompt}],
-    )
-    return "".join(
-        block.text for block in resp.content if getattr(block, "type", None) == "text"
-    )
+    cmd = [
+        "claude", "-p", prompt,
+        "--model", MODEL,
+        "--allowedTools", "WebSearch,WebFetch",
+        "--permission-mode", "bypassPermissions",
+        "--max-turns", "40",
+        "--output-format", "text",
+    ]
+    try:
+        proc = subprocess.run(
+            cmd, capture_output=True, text=True, timeout=1500,
+            env={**os.environ, "CLAUDE_CODE_OAUTH_TOKEN": token},
+        )
+    except FileNotFoundError:
+        sys.exit("ERROR: `claude` CLI not found. Install @anthropic-ai/claude-code first.")
+    except subprocess.TimeoutExpired:
+        sys.exit("ERROR: claude CLI timed out after 25 minutes.")
+    if proc.returncode != 0:
+        sys.exit(f"ERROR: claude CLI failed (exit {proc.returncode}):\n{proc.stderr[-2000:]}")
+    return proc.stdout
 
 
 def extract_json_array(text):
@@ -159,12 +172,12 @@ def clean(events, this_monday):
             continue
         try:
             date = datetime.strptime(e["date"], "%Y-%m-%d").date()
-            week_of = datetime.strptime(e["week_of"], "%Y-%m-%d").date()
         except (ValueError, TypeError):
             continue
         if not str(e["url"]).startswith("http"):
             continue
-        # Normalize week_of to the true Monday of `date`, and drop past weeks.
+        # week_of is always derived from `date` (the true Monday), so a bad or
+        # missing model-supplied week_of never drops an otherwise-valid event.
         week_of = monday_of(date)
         if week_of < this_monday:
             continue
