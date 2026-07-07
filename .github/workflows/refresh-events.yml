@@ -1,0 +1,61 @@
+name: Refresh weekly events
+
+# Re-researches local + online chip-design events every Monday and rewrites
+# _data/events.yml. Since Pages here is a legacy (deploy-from-branch) site, a
+# GITHUB_TOKEN push does NOT auto-trigger the Pages build, so we request one
+# explicitly via the Pages build API after committing.
+
+on:
+  schedule:
+    - cron: "0 13 * * 1"   # Mondays 13:00 UTC (~06:00 America/Los_Angeles)
+  workflow_dispatch: {}     # allow manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write           # commit the refreshed data file
+  pages: write              # request a Pages build
+
+concurrency:
+  group: refresh-events
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install "anthropic>=0.40" pyyaml
+
+      - name: Regenerate _data/events.yml
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python .github/scripts/refresh_events.py
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          if git diff --quiet -- _data/events.yml; then
+            echo "No changes to events.yml."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config user.name "events-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add _data/events.yml
+            git commit -m "chore(events): weekly automated refresh"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger Pages build
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST \
+            -H "Accept: application/vnd.github+json" \
+            "repos/${{ github.repository }}/pages/builds"
