@@ -130,7 +130,7 @@ def call_claude(prompt):
     cmd = [
         "claude", "-p", prompt,
         "--model", MODEL,
-        "--allowedTools", "WebSearch,WebFetch",
+        "--allowedTools", "WebSearch", "WebFetch",
         "--permission-mode", "bypassPermissions",
         "--max-turns", "40",
         "--output-format", "text",
@@ -145,7 +145,11 @@ def call_claude(prompt):
     except subprocess.TimeoutExpired:
         sys.exit("ERROR: claude CLI timed out after 25 minutes.")
     if proc.returncode != 0:
-        sys.exit(f"ERROR: claude CLI failed (exit {proc.returncode}):\n{proc.stderr[-2000:]}")
+        sys.exit(
+            f"ERROR: claude CLI failed (exit {proc.returncode}).\n"
+            f"--- stderr (tail) ---\n{proc.stderr[-3000:]}\n"
+            f"--- stdout (tail) ---\n{proc.stdout[-3000:]}"
+        )
     return proc.stdout
 
 
