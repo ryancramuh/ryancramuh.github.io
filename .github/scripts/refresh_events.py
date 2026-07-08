@@ -103,6 +103,9 @@ later weekly bucket.
 Each event's `week_of` MUST be the Monday of the week its `date` falls in, and
 MUST NOT be earlier than {this_monday.isoformat()}.
 
+Do NOT use em-dashes (the "—" character) anywhere in names or descriptions;
+use commas, periods, or " - " instead. Keep descriptions plain and human.
+
 Return ONLY a JSON array (no prose, no markdown fence) of event objects:
 [
   {{
@@ -165,6 +168,11 @@ def extract_json_array(text):
     return json.loads(raw)
 
 
+def no_dash(s):
+    # Hard guarantee: em-dashes never reach events.yml regardless of model output.
+    return re.sub(r"\s*—\s*", " - ", str(s)).strip()
+
+
 def clean(events, this_monday):
     out = []
     for e in events:
@@ -186,14 +194,14 @@ def clean(events, this_monday):
         if week_of < this_monday:
             continue
         item = {
-            "name": str(e["name"]).strip(),
+            "name": no_dash(e["name"]),
             "date": date.isoformat(),
             "week_of": week_of.isoformat(),
-            "date_display": str(e.get("date_display") or date.strftime("%b %d, %Y")),
+            "date_display": no_dash(e.get("date_display") or date.strftime("%b %d, %Y")),
             "mode": e["mode"],
-            "location": str(e["location"]).strip(),
+            "location": no_dash(e["location"]),
             "url": str(e["url"]).strip(),
-            "desc": str(e["desc"]).strip(),
+            "desc": no_dash(e["desc"]),
         }
         tags = [t for t in (e.get("tags") or []) if t in VALID_TAGS]
         if tags:

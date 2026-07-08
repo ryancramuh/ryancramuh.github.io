@@ -1,13 +1,31 @@
-title: Cramer Docs
-description: Ryan Cramer's Personal Github
-remote_theme: just-the-docs/just-the-docs
-color_scheme: chip
-search_enabled: true
-collapse_navigation: false
-show_nav_level: 3
+title: Ryan Cramer
+description: Ryan Cramer's personal site. Computer engineering, chip design, RTL to ASIC.
+author: Ryan Cramer
+
+# Custom-built site (no remote theme). Layouts live in _layouts, styles in
+# assets/css/style.scss + _sass/. Markdown coursework pages still build via kramdown.
 markdown: kramdown
 
 kramdown:
   math_engine: mathjax
   math_engine_opts:
     preview: true
+
+sass:
+  style: compressed
+
+# Give every page the custom chrome unless it overrides `layout` in its front matter.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - carp.md.bak
+  - vendor
+  - .github
+  - .claude

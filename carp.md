@@ -9,14 +9,14 @@ The **Computer Architecture Research Project (CARP)** at **Cal Poly San Luis Obi
 CARP’s mission is to **bridge digital design education and real-world silicon development**, giving students the opportunity to take a custom **RISC-V SoC** from RTL to GDSII using fully open-source ASIC tools.
 
 **Websites:**
-- [calpolycarp.org](https://calpolycarp.org) — main project site and outreach portal  
-- [cal-poly-ramp.github.io](https://cal-poly-ramp.github.io) — internal documentation and technical wiki  
+- [calpolycarp.org](https://calpolycarp.org) - main project site and outreach portal  
+- [cal-poly-ramp.github.io](https://cal-poly-ramp.github.io) - internal documentation and technical wiki  
 
 ---
 
 ## Leadership and Vision
 
-- **Founder & Lead of CARP** — Established the project to empower Cal Poly students with real industry-relevant ASIC and FPGA experience.  
+- **Founder & Lead of CARP** - Established the project to empower Cal Poly students with real industry-relevant ASIC and FPGA experience.  
 - **Defined the organizational structure** for Frontend (RTL/ISA), Backend (Verification & Synthesis), and Layout (PDK/Physical Design) teams.  
 - Built a framework for **sustained multi-quarter collaboration**, enabling continuity beyond a single academic term.  
 - Guided the team toward a **tapeout-ready open-source RISC-V SoC**, emphasizing documentation, verification, and reproducibility.
@@ -41,7 +41,7 @@ I built and maintained CARP’s documentation ecosystem to ensure professional-l
 
 To support cross-disciplinary collaboration, I designed a reproducible **Docker environment** integrating all required ASIC tools:
 
-- **OpenLane**, **Yosys**, **Magic**, **KLayout**, **Netgen**, **Verilator**, and **Icarus Verilog** — packaged into a unified CARP Docker image.
+- **OpenLane**, **Yosys**, **Magic**, **KLayout**, **Netgen**, **Verilator**, and **Icarus Verilog** - packaged into a unified CARP Docker image.
 - Added **RISC-V GNU toolchain**, **Spike**, and **FreeRTOS** support for embedded testing.
 - Wrote comprehensive setup scripts (`install.sh`, `run.sh`, and `carp-tools/entrypoint.sh`) to simplify environment bootstrapping.
 - Ensured compatibility between student laptops, lab machines, and remote build servers using containerized workflows.
@@ -51,7 +51,7 @@ To support cross-disciplinary collaboration, I designed a reproducible **Docker 
 
 ## Advocacy and Recognition
 
-CARP’s impact extends beyond the lab — I’ve led outreach and advocacy to secure recognition and support from Cal Poly and the broader academic community.
+CARP’s impact extends beyond the lab - I’ve led outreach and advocacy to secure recognition and support from Cal Poly and the broader academic community.
 
 - **Advocated for official recognition** as a **Cal Poly Research Organization**, coordinating with faculty advisor  **Professor James (Bryan) Mealy**.  
 - Collaborated with **EE and CPE departments** to align CARP’s roadmap with VLSI and digital systems coursework.  
@@ -90,7 +90,7 @@ Through CARP, I’ve established a **comprehensive student research ecosystem** 
 - Clear documentation and public transparency,
 - Departmental advocacy, and long-term sustainability through infrastructure and mentorship.
 
-CARP now stands as one of the first open-source ASIC research projects at Cal Poly — a community of engineers pushing the boundaries of what’s possible in undergraduate chip design.
+CARP now stands as one of the first open-source ASIC research projects at Cal Poly - a community of engineers pushing the boundaries of what’s possible in undergraduate chip design.
 
 ---
 

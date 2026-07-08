@@ -3,7 +3,7 @@ title: EVA
 nav_order: 9
 ---
 
-# Ryan Cramer — Work with EVA (Environmental Vibration Analyzer)
+# Ryan Cramer - Work with EVA (Environmental Vibration Analyzer)
 
 The **Environmental Vibration Analyzer (EVA)** is a mixed-signal embedded research project I designed to analyze real-world vibration patterns and interpret them through **neuromorphic computation**.  
 Built around an **STM32L476RGT6 microcontroller**, EVA combines **sensor acquisition**, **analog preprocessing**, and **on-board signal analysis** with the long-term goal of enabling **spiking neural network (SNN)**-based vibration classification for predictive maintenance.
@@ -80,7 +80,7 @@ The **FFT stage** computes frequency-domain energy distributions, which feed int
 
 ## Broader Context and Vision
 
-EVA is a stepping stone toward **hardware-level machine perception** — a fusion of analog electronics, embedded DSP, and neuromorphic computation.  
+EVA is a stepping stone toward **hardware-level machine perception** - a fusion of analog electronics, embedded DSP, and neuromorphic computation.  
 By translating real-world vibrations into spiking neuron dynamics, EVA lays the groundwork for **predictive maintenance systems** that can autonomously detect imbalance, wear, or resonance patterns in vehicles and industrial equipment.
 
 The long-term vision is to integrate EVA into a **hardware neuromorphic sensor node** that learns from its environment without cloud dependency or external computation.

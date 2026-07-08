@@ -30,9 +30,9 @@ Today most people write Verilog/VHDL and use synthesis programs to decide on the
 
 | Circuit Element | 1 Input        | 2 Inputs        | 3 Inputs        | 4 Inputs        |
 |-----------------|----------------|-----------------|-----------------|-----------------|
-| Inverter        | $P_{inv}$ = 1       | —               | —               | —               |
-| NAND            | —              | $2 {\times} P_{inv}$         | $3 {\times} P_{inv}$          | $4 {\times} P_{inv}$          |
-| NOR             | —              | $3 {\times} P_{inv}$          | $4.5 {\times} P_{inv}$       | $6 {\times} P_{inv}$          |
+| Inverter        | $P_{inv}$ = 1       | - | - | - |
+| NAND            | - | $2 {\times} P_{inv}$         | $3 {\times} P_{inv}$          | $4 {\times} P_{inv}$          |
+| NOR             | - | $3 {\times} P_{inv}$          | $4.5 {\times} P_{inv}$       | $6 {\times} P_{inv}$          |
 
 
 While a good rule of thumb for a fast design is a fanout of 4, we will see in this problem that, for real circuits, the question of fastest fanout is a little more complex. As we change the number of stages, and the logic needed per stage, we are changing both the parasitic delay and the effort delay. The best topology minimizes the total delay and depends on the relationship between parasitic delay changes and fanout. For the fanout of 100 case, you will need to consider a few options to solve the problem. 

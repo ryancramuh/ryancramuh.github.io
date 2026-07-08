@@ -1,5 +1,5 @@
 ---
-title: MST — Microsystems Technology
+title: MST - Microsystems Technology
 parent: MicroFab Work
 ---
 
@@ -15,7 +15,7 @@ MST (Microsystems Technology) is a Cal Poly research club focused on **materials
 
 ## Get Involved
 
-MST is open to students across all majors — EE, CPE, CS, Materials Engineering, Physics. You don't need a cleanroom background. You just need to be curious about how silicon actually works.
+MST is open to students across all majors - EE, CPE, CS, Materials Engineering, Physics. You don't need a cleanroom background. You just need to be curious about how silicon actually works.
 
 **Join the MST Discord to connect with the team and find out about upcoming projects and events:**
 
@@ -31,12 +31,12 @@ MST is open to students across all majors — EE, CPE, CS, Materials Engineering
 
 ## Why Should CARP Members Care?
 
-Modern computer architecture doesn't exist in a vacuum. The performance walls we hit — power density, leakage current, interconnect delay — are **materials and process problems** as much as they are architecture problems. Understanding the substrate gives you a fundamentally different lens on:
+Modern computer architecture doesn't exist in a vacuum. The performance walls we hit - power density, leakage current, interconnect delay - are **materials and process problems** as much as they are architecture problems. Understanding the substrate gives you a fundamentally different lens on:
 
-- **Why clock frequencies plateaued** — thermal and leakage constraints at the device level
-- **Why 3D stacking (HBM, chiplets) is the current scaling path** — lithography and interconnect physics
-- **Why new memory technologies (MRAM, PCM, RRAM) behave differently** — it's all materials
-- **Why process nodes (5nm, 3nm) don't mean what they used to** — marketing vs. actual device geometry
+- **Why clock frequencies plateaued** - thermal and leakage constraints at the device level
+- **Why 3D stacking (HBM, chiplets) is the current scaling path** - lithography and interconnect physics
+- **Why new memory technologies (MRAM, PCM, RRAM) behave differently** - it's all materials
+- **Why process nodes (5nm, 3nm) don't mean what they used to** - marketing vs. actual device geometry
 
 If you want to work at Intel, AMD, TSMC, Apple Silicon, or any serious semiconductor company, knowing what happens in the fab is a genuine differentiator.
 
@@ -46,10 +46,10 @@ If you want to work at Intel, AMD, TSMC, Apple Silicon, or any serious semicondu
 
 MST members work with real fabrication equipment and processes, including:
 
-- **Photolithography** — patterning features on silicon using UV light and photoresist
-- **Thin film deposition** — sputtering and evaporation of metal and dielectric layers
-- **Wet and dry etching** — removing material with chemical precision
-- **Metrology and inspection** — characterizing what you built using instrumentation devices
+- **Photolithography** - patterning features on silicon using UV light and photoresist
+- **Thin film deposition** - sputtering and evaporation of metal and dielectric layers
+- **Wet and dry etching** - removing material with chemical precision
+- **Metrology and inspection** - characterizing what you built using instrumentation devices
 
 Members have toured industry facilities, designed their own wafer masks, and run actual silicon process flows. Below are some photos from recent MST activities.
 
@@ -69,7 +69,7 @@ Here's a custom mask design (the Acid-head Mad Hatter, a nod to the psychedelic 
 
 ---
 
-### KLA Instruments Tour — Milpitas, CA
+### KLA Instruments Tour - Milpitas, CA
 
 MST recently toured **KLA Corporation** in Milpitas, one of the world's leading semiconductor process control and inspection equipment companies. KLA tools are used in virtually every advanced fab on the planet to catch defects at the nanometer scale. This is the kind of metrology infrastructure that makes sub-5nm manufacturing possible.
 

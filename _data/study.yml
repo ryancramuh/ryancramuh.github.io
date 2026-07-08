@@ -1,5 +1,5 @@
 # =============================================================================
-# study.yml  —  data source for the Weekly Study Dashboard (/dashboard.html)
+# study.yml - data source for the Weekly Study Dashboard (/dashboard.html)
 # -----------------------------------------------------------------------------
 # EDIT THIS FILE to change what shows on the dashboard. The page (dashboard.html)
 # is a pure template: it loops over `weeks` and renders each item as a checkable
@@ -10,7 +10,7 @@
 #   weeks:                          # list, rendered newest-first as written
 #     - id: <slug>                  # REQUIRED, stable & unique. Used as the
 #                                   #   localStorage key prefix for checkbox
-#                                   #   state — DO NOT rename an existing id or
+#                                   #   state - DO NOT rename an existing id or
 #                                   #   users lose their checked progress.
 #       label: "<short tag>"        # e.g. "Week of Jul 6" (mono eyebrow)
 #       title: "<week theme>"       # headline for the column
@@ -46,7 +46,7 @@ weeks:
         note: "Tie launch/capture edges back to the clock period equation."
         resources:
           - { label: "vlsi-expert STA", url: "https://www.vlsi-expert.com/p/static-timing-analysis-sta.html" }
-      - text: "Read: clock tree synthesis goals — skew, latency, useful skew"
+      - text: "Read: clock tree synthesis goals - skew, latency, useful skew"
         cat: pd
         resources:
           - { label: "Synopsys CTS primer", url: "https://www.synopsys.com/glossary/what-is-clock-tree-synthesis.html" }
@@ -57,7 +57,7 @@ weeks:
       - text: "RTL: code a parameterized synchronous FIFO with full/empty flags"
         cat: rtl
         note: "Gray-code the pointers; think about metastability at the boundary."
-      - text: "Paper: 'A Family of Adders' — carry-lookahead vs carry-select tradeoffs"
+      - text: "Paper: 'A Family of Adders' - carry-lookahead vs carry-select tradeoffs"
         cat: papers
         note: "PDF already in Stanford_VLSI/Adders/."
 
@@ -83,7 +83,7 @@ weeks:
   - id: 2026-w26
     label: "Week of Jun 22"
     title: "Warm-up / tooling"
-    focus: "Example of a completed week — copy this block to add new weeks."
+    focus: "Example of a completed week - copy this block to add new weeks."
     items:
       - text: "Set up local sky130 + OpenLane docker and run the inverter example"
         cat: eda

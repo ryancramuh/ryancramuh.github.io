@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.url != "/" %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} · Computer Engineering{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="author" content="{{ site.author }}">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23070c12'/%3E%3Crect x='7' y='7' width='18' height='18' rx='3' fill='none' stroke='%2338d6f0' stroke-width='2'/%3E%3Ccircle cx='11' cy='11' r='1.6' fill='%23d19a4e'/%3E%3C/svg%3E">
+
+  {% include head_custom.html %}
+</head>
+<body{% if page.url == "/" %} class="is-home"{% endif %}>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav__pkg">
+      <a class="nav__brand" href="{{ '/' | relative_url }}" aria-label="Home">
+        <span class="nav__notch" aria-hidden="true"></span>
+        <span class="nav__mark">RC</span>
+        <span class="nav__id">ryan_cramer<span class="nav__rev">rev.2</span></span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-pins">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__pins" id="nav-pins" aria-label="Primary">
+        {% assign pins = "home,/|github,/#github|projects,/#projects|dashboard,/dashboard.html|events,/events.html|schedule,/schedule.html|archive,/archive.html" | split: "|" %}
+        {% for p in pins %}
+          {% assign parts = p | split: "," %}
+          {% assign label = parts[0] %}
+          {% assign href = parts[1] %}
+          <a class="pin{% if page.url == href %} is-active{% endif %}" href="{{ href | relative_url }}" data-pin="{{ label }}"{% if page.url == href %} aria-current="page"{% endif %}>
+            <span class="pin__label">{{ label }}</span>
+            <span class="pin__lead" aria-hidden="true"></span>
+          </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap{% if page.url != '/' %} wrap--page{% endif %}">
+    {{ content }}
+  </main>
+
+  <footer class="foot">
+    <div class="foot__inner">
+      <div class="foot__prompt"><span class="foot__c">ryan@silicon</span>:<span class="foot__p">~</span>$ logout</div>
+      <div class="foot__links">
+        <a href="https://github.com/ryancramuh" target="_blank" rel="noopener">github</a>
+        <a href="{{ '/archive.html' | relative_url }}">archive</a>
+        <a href="{{ '/dashboard.html' | relative_url }}">dashboard</a>
+        <a href="#top">top ↑</a>
+      </div>
+      <div class="foot__meta">© {{ site.time | date: "%Y" }} Ryan Cramer · built from silicon &amp; markdown</div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    // --- Mobile nav toggle ---------------------------------------------------
+    var toggle = document.querySelector('.nav__toggle');
+    var pkg = document.querySelector('.nav__pkg');
+    if (toggle && pkg) {
+      toggle.addEventListener('click', function () {
+        var open = pkg.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      // close after tapping a pin on mobile
+      pkg.querySelectorAll('.pin').forEach(function (a) {
+        a.addEventListener('click', function () {
+          pkg.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // --- Shrink nav on scroll ------------------------------------------------
+    var nav = document.querySelector('.nav');
+    var onScroll = function () {
+      if (window.scrollY > 24) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // --- Scroll-spy: light the pin for the section in view (home only) -------
+    if (document.body.classList.contains('is-home') &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
+      var pinFor = {};
+      document.querySelectorAll('.pin').forEach(function (pin) {
+        var href = pin.getAttribute('href') || '';
+        var hash = href.indexOf('#') >= 0 ? href.slice(href.indexOf('#') + 1) : '';
+        if (hash) pinFor[hash] = pin;
+      });
+      // Let the hero (id="intro") drive the "home" pin so only one pin lights.
+      var homePin = document.querySelector('.pin[data-pin="home"]');
+      if (homePin) { pinFor['intro'] = homePin; homePin.classList.remove('is-active'); }
+      if ('IntersectionObserver' in window && sections.length) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            var pin = pinFor[e.target.id];
+            if (!pin) return;
+            if (e.isIntersecting) {
+              Object.keys(pinFor).forEach(function (k) { pinFor[k].classList.remove('is-active'); });
+              pin.classList.add('is-active');
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        sections.forEach(function (s) { io.observe(s); });
+      }
+    }
+
+    // --- Reveal-on-scroll ----------------------------------------------------
+    var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    if (reveals.length) {
+      if ('IntersectionObserver' in window &&
+          !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var ro = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+        reveals.forEach(function (el) { ro.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-in'); });
+      }
+    }
+  })();
+  </script>
+</body>
+</html>
