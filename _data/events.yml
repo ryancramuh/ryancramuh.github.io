@@ -23,26 +23,11 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-07-27"
-this_week: "2026-07-27"
+refreshed: "2026-08-03"
+this_week: "2026-08-03"
 
 events:
-  # --- Week of Jul 27, 2026  (current) ------------
-  - name: 2nd IEEE International Conference on LLM-Aided Design (ICLAD/LAD 2026)
-    date: '2026-07-30'
-    week_of: '2026-07-27'
-    date_display: Jul 30, 2026 · Stanford, CA
-    mode: local
-    location: Stanford University, Stanford, CA
-    url: https://iclad.ai/
-    desc: IEEE conference on using large language models to help design circuits, software, and computing
-      systems.
-    tags:
-    - eda
-    - papers
-    - arch
-
-  # --- Week of Aug 03, 2026 ------------
+  # --- Week of Aug 03, 2026  (current) ------------
   - name: CXL Mini DevCon 2026
     date: '2026-08-03'
     week_of: '2026-08-03'
@@ -50,7 +35,7 @@ events:
     mode: local
     location: Santa Clara Marriott, Santa Clara, CA
     url: https://computeexpresslink.org/cxl-mini-devcon-2026/
-    desc: One-day CXL Consortium event for developers, architects, and validation engineers working on CXL
+    desc: One day CXL Consortium event for developers, architects, and validation engineers working on CXL
       interconnect technology.
     tags:
     - asic
@@ -63,8 +48,8 @@ events:
     mode: local
     location: Santa Clara Convention Center, Santa Clara, CA
     url: https://futurememorystorage.com/
-    desc: Major memory and storage industry event covering DRAM, CXL, UCIe chiplet interconnects, and AI-driven
-      memory architectures.
+    desc: Major memory and storage industry event covering DRAM, CXL, UCIe chiplet interconnects, and AI
+      driven memory architectures.
     tags:
     - asic
 
@@ -79,7 +64,46 @@ events:
     tags:
     - asic
 
+  # --- Week of Aug 10, 2026 ------------
+  - name: 'Inside the Fab: An Introduction to Semiconductor Manufacturing'
+    date: '2026-08-10'
+    week_of: '2026-08-10'
+    date_display: Aug 10, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.semi.org/en/event/inside-fab-introduction-semiconductor-manufacturing-asia
+    desc: SEMI virtual training walking through semiconductor manufacturing from silicon fundamentals through
+      wafer fabrication, packaging, and test.
+    tags:
+    - asic
+
+  - name: Accelerating Innovation in Advanced Packaging and Heterogeneous Integration with AI
+    date: '2026-08-11'
+    week_of: '2026-08-10'
+    date_display: Aug 11, 2026 · San Jose, CA
+    mode: local
+    location: San Jose, CA
+    url: https://www.semi.org/en/expositions-events/calendar
+    desc: SEMI event on how AI is accelerating advanced packaging and heterogeneous integration for next
+      generation chips.
+    tags:
+    - asic
+    - arch
+
   # --- Week of Aug 17, 2026 ------------
+  - name: 'Build Better Chips: Careers in Silicon Chip Design and Semiconductor Engineering'
+    date: '2026-08-17'
+    week_of: '2026-08-17'
+    date_display: Aug 17, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.ucsc-extension.edu/events/build-better-chips-0
+    desc: UCSC Silicon Valley Extension panel on industry trends and emerging skills in silicon chip design
+      and semiconductor engineering.
+    tags:
+    - rtl
+    - asic
+
   - name: Hot Interconnects 2026 (HotI, IEEE Symposium on High-Performance Interconnects)
     date: '2026-08-19'
     week_of: '2026-08-17'
@@ -106,6 +130,18 @@ events:
     - arch
     - asic
 
+  - name: Semiconductor-MedTech Ecosystem Summit 2026
+    date: '2026-08-27'
+    week_of: '2026-08-24'
+    date_display: Aug 27, 2026 · Milpitas, CA
+    mode: local
+    location: Milpitas, CA
+    url: https://www.semi.org/en/industry-groups/smart-medtech/events-and-news
+    desc: SEMI Smart MedTech summit connecting semiconductor and medical device leaders on advanced chip
+      and packaging technology for medical devices.
+    tags:
+    - asic
+
   # --- Week of Aug 31, 2026 ------------
   - name: GlobalFoundries Technology Summit 2026
     date: '2026-09-02'
@@ -118,6 +154,34 @@ events:
       ecosystem updates.
     tags:
     - asic
+
+  # --- Week of Sep 07, 2026 ------------
+  - name: Future of Computing 2026
+    date: '2026-09-09'
+    week_of: '2026-09-07'
+    date_display: Sep 09, 2026 · San Jose, CA
+    mode: local
+    location: San Jose, CA
+    url: https://www.semi.org/en/event/future-computing-2026
+    desc: SEMI workshop uniting the AI compute ecosystem across devices, packaging, photonics, and architectures
+      for system-technology co-optimization.
+    tags:
+    - arch
+    - asic
+
+  - name: 'ESD Alliance Webinar: Gen-AI for Chip Design and Security'
+    date: '2026-09-10'
+    week_of: '2026-09-07'
+    date_display: Sep 10, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.semi.org/en/communities/esda
+    desc: SEMI ESD Alliance webinar on how generative and agentic AI are changing chip design workflows
+      and hardware security.
+    tags:
+    - eda
+    - rtl
+    - verif
 
   # --- Week of Sep 14, 2026 ------------
   - name: AI Infra Summit 2026
