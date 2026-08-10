@@ -23,57 +23,20 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-08-03"
-this_week: "2026-08-03"
+refreshed: "2026-08-10"
+this_week: "2026-08-10"
 
 events:
-  # --- Week of Aug 03, 2026  (current) ------------
-  - name: CXL Mini DevCon 2026
-    date: '2026-08-03'
-    week_of: '2026-08-03'
-    date_display: Aug 03, 2026 · Santa Clara, CA
-    mode: local
-    location: Santa Clara Marriott, Santa Clara, CA
-    url: https://computeexpresslink.org/cxl-mini-devcon-2026/
-    desc: One day CXL Consortium event for developers, architects, and validation engineers working on CXL
-      interconnect technology.
-    tags:
-    - asic
-    - arch
-
-  - name: 'FMS: Future of Memory and Storage 2026'
-    date: '2026-08-04'
-    week_of: '2026-08-03'
-    date_display: Aug 04, 2026 · Santa Clara, CA
-    mode: local
-    location: Santa Clara Convention Center, Santa Clara, CA
-    url: https://futurememorystorage.com/
-    desc: Major memory and storage industry event covering DRAM, CXL, UCIe chiplet interconnects, and AI
-      driven memory architectures.
-    tags:
-    - asic
-
-  - name: AI Techniques in Semiconductor Manufacturing 2026
-    date: '2026-08-05'
-    week_of: '2026-08-03'
-    date_display: Aug 05, 2026 · Milpitas, CA
-    mode: local
-    location: SEMI Headquarters, Milpitas, CA
-    url: https://www.semi.org/en/event/ai-techniques-workshop
-    desc: SEMI workshop on applying AI, virtual metrology, and causal analysis to semiconductor fab processes.
-    tags:
-    - asic
-
-  # --- Week of Aug 10, 2026 ------------
-  - name: 'Inside the Fab: An Introduction to Semiconductor Manufacturing'
+  # --- Week of Aug 10, 2026  (current) ------------
+  - name: 'Inside the Fab: An Introduction to Semiconductor Manufacturing (Asia)'
     date: '2026-08-10'
     week_of: '2026-08-10'
     date_display: Aug 10, 2026 · online
     mode: online
     location: Online
     url: https://www.semi.org/en/event/inside-fab-introduction-semiconductor-manufacturing-asia
-    desc: SEMI virtual training walking through semiconductor manufacturing from silicon fundamentals through
-      wafer fabrication, packaging, and test.
+    desc: SEMI virtual course covering semiconductor manufacturing fundamentals, from silicon basics through
+      front end wafer fabrication to packaging and test.
     tags:
     - asic
 
@@ -104,6 +67,19 @@ events:
     - rtl
     - asic
 
+  - name: 'Aldec Webinar: Why Transaction-Level Modeling Will Be Necessary'
+    date: '2026-08-19'
+    week_of: '2026-08-17'
+    date_display: Aug 19, 2026 · online
+    mode: online
+    location: Online
+    url: https://events.teams.microsoft.com/event/784f9700-a653-458f-8fbe-a22b276eeb24@81539b6f-c580-4912-b12f-f323cf32ce96
+    desc: Aldec webinar on the growing role of transaction level modeling in chip design and verification
+      flows.
+    tags:
+    - rtl
+    - verif
+
   - name: Hot Interconnects 2026 (HotI, IEEE Symposium on High-Performance Interconnects)
     date: '2026-08-19'
     week_of: '2026-08-17'
@@ -116,11 +92,23 @@ events:
     tags:
     - arch
 
+  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 1'
+    date: '2026-08-20'
+    week_of: '2026-08-17'
+    date_display: Aug 20, 2026 · online
+    mode: online
+    location: Online
+    url: https://resources.aldec.com/acton/media/23474/practical-co-simulation-techniques-with-osvvm-part-1-getting-started-with-osvvm-co-simulation-us
+    desc: Aldec webinar introducing OSVVM based co-simulation techniques for RTL verification.
+    tags:
+    - rtl
+    - verif
+
   # --- Week of Aug 24, 2026 ------------
   - name: Hot Chips 2026 (HC38)
     date: '2026-08-24'
     week_of: '2026-08-24'
-    date_display: Aug 24, 2026 · Stanford, CA
+    date_display: Aug 23 to 25, 2026 · Stanford, CA
     mode: local
     location: Memorial Auditorium, Stanford University, Palo Alto, CA
     url: https://hotchips.org/
@@ -130,13 +118,25 @@ events:
     - arch
     - asic
 
+  - name: 'Aldec Webinar: Simplifying DO-254 Compliance for FPGA Designs'
+    date: '2026-08-26'
+    week_of: '2026-08-24'
+    date_display: Aug 26, 2026 · online
+    mode: online
+    location: Online
+    url: https://events.teams.microsoft.com/event/32da3010-66d5-4e8e-9865-cfca943baacc@81539b6f-c580-4912-b12f-f323cf32ce96
+    desc: Aldec webinar on practical approaches to DO-254 compliance for FPGA based designs.
+    tags:
+    - verif
+    - rtl
+
   - name: Semiconductor-MedTech Ecosystem Summit 2026
     date: '2026-08-27'
     week_of: '2026-08-24'
     date_display: Aug 27, 2026 · Milpitas, CA
     mode: local
-    location: Milpitas, CA
-    url: https://www.semi.org/en/industry-groups/smart-medtech/events-and-news
+    location: SEMI Headquarters, Milpitas, CA
+    url: https://www.semi.org/en/event/semiconductor-medtech-ecosystem-summit
     desc: SEMI Smart MedTech summit connecting semiconductor and medical device leaders on advanced chip
       and packaging technology for medical devices.
     tags:
@@ -154,6 +154,18 @@ events:
       ecosystem updates.
     tags:
     - asic
+
+  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 2 (RISC-V Co-Development)'
+    date: '2026-09-03'
+    week_of: '2026-08-31'
+    date_display: Sep 03, 2026 · online
+    mode: online
+    location: Online
+    url: https://resources.aldec.com/acton/media/23474/practical-co-simulation-techniques-with-osvvm-part-2-risc-v-software-and-logic-co-development-us
+    desc: Aldec webinar on co-simulating RISC-V software with RTL logic using OSVVM.
+    tags:
+    - rtl
+    - verif
 
   # --- Week of Sep 07, 2026 ------------
   - name: Future of Computing 2026
@@ -197,7 +209,58 @@ events:
     - arch
     - asic
 
+  - name: Automotive Electronics Forum 2026
+    date: '2026-09-17'
+    week_of: '2026-09-14'
+    date_display: Sep 17, 2026 · Santa Clara, CA
+    mode: local
+    location: Agilent/Keysight Campus, Santa Clara, CA
+    url: https://www.jedec.org/auto-forum-2026
+    desc: JEDEC forum on semiconductor and memory standards for automotive electronics, covering reliability
+      and system design.
+    tags:
+    - asic
+
+  # --- Week of Sep 21, 2026 ------------
+  - name: GSA US Executive Forum 2026
+    date: '2026-09-22'
+    week_of: '2026-09-21'
+    date_display: Sep 22, 2026 · Menlo Park, CA
+    mode: local
+    location: Rosewood Sand Hill, Menlo Park, CA
+    url: https://www.gsaglobal.org/events/
+    desc: Global Semiconductor Alliance executive forum bringing together industry leaders to discuss semiconductor
+      ecosystem trends.
+    tags:
+    - asic
+    tentative: true
+
+  - name: TSMC 2026 North America OIP Ecosystem Forum
+    date: '2026-09-23'
+    week_of: '2026-09-21'
+    date_display: Sep 23, 2026 · Santa Clara, CA
+    mode: local
+    location: Santa Clara Convention Center, Santa Clara, CA
+    url: https://pr.tsmc.com/english/events/tsmc-events
+    desc: TSMC's annual Open Innovation Platform forum showcasing process, design enablement, and EDA ecosystem
+      updates for advanced nodes.
+    tags:
+    - asic
+    - eda
+
   # --- Week of Oct 12, 2026 ------------
+  - name: OCP Global Summit 2026
+    date: '2026-10-12'
+    week_of: '2026-10-12'
+    date_display: Oct 12 to 15, 2026 · San Jose, CA
+    mode: local
+    location: San Jose Convention Center, San Jose, CA
+    url: https://www.opencompute.org/summit/global-summit
+    desc: Open Compute Project's flagship summit on open hardware and system architecture for AI and data
+      center infrastructure.
+    tags:
+    - arch
+
   - name: SEMICON West 2026
     date: '2026-10-13'
     week_of: '2026-10-12'
