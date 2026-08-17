@@ -23,37 +23,11 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-08-10"
-this_week: "2026-08-10"
+refreshed: "2026-08-17"
+this_week: "2026-08-17"
 
 events:
-  # --- Week of Aug 10, 2026  (current) ------------
-  - name: 'Inside the Fab: An Introduction to Semiconductor Manufacturing (Asia)'
-    date: '2026-08-10'
-    week_of: '2026-08-10'
-    date_display: Aug 10, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.semi.org/en/event/inside-fab-introduction-semiconductor-manufacturing-asia
-    desc: SEMI virtual course covering semiconductor manufacturing fundamentals, from silicon basics through
-      front end wafer fabrication to packaging and test.
-    tags:
-    - asic
-
-  - name: Accelerating Innovation in Advanced Packaging and Heterogeneous Integration with AI
-    date: '2026-08-11'
-    week_of: '2026-08-10'
-    date_display: Aug 11, 2026 · San Jose, CA
-    mode: local
-    location: San Jose, CA
-    url: https://www.semi.org/en/expositions-events/calendar
-    desc: SEMI event on how AI is accelerating advanced packaging and heterogeneous integration for next
-      generation chips.
-    tags:
-    - asic
-    - arch
-
-  # --- Week of Aug 17, 2026 ------------
+  # --- Week of Aug 17, 2026  (current) ------------
   - name: 'Build Better Chips: Careers in Silicon Chip Design and Semiconductor Engineering'
     date: '2026-08-17'
     week_of: '2026-08-17'
@@ -61,8 +35,8 @@ events:
     mode: online
     location: Online
     url: https://www.ucsc-extension.edu/events/build-better-chips-0
-    desc: UCSC Silicon Valley Extension panel on industry trends and emerging skills in silicon chip design
-      and semiconductor engineering.
+    desc: UCSC Silicon Valley Extension panel on industry trends, emerging skills, and career paths in silicon
+      chip design and semiconductor engineering.
     tags:
     - rtl
     - asic
@@ -73,7 +47,7 @@ events:
     date_display: Aug 19, 2026 · online
     mode: online
     location: Online
-    url: https://events.teams.microsoft.com/event/784f9700-a653-458f-8fbe-a22b276eeb24@81539b6f-c580-4912-b12f-f323cf32ce96
+    url: https://www.aldec.com/en/support/training/webinars
     desc: Aldec webinar on the growing role of transaction level modeling in chip design and verification
       flows.
     tags:
@@ -87,7 +61,7 @@ events:
     mode: online
     location: Online
     url: https://hoti.org/2026/
-    desc: 33rd IEEE symposium on high-performance interconnects for computing systems, held fully virtually
+    desc: 33rd IEEE symposium on high performance interconnects for computing systems, held fully virtually
       this year.
     tags:
     - arch
@@ -98,24 +72,35 @@ events:
     date_display: Aug 20, 2026 · online
     mode: online
     location: Online
-    url: https://resources.aldec.com/acton/media/23474/practical-co-simulation-techniques-with-osvvm-part-1-getting-started-with-osvvm-co-simulation-us
-    desc: Aldec webinar introducing OSVVM based co-simulation techniques for RTL verification.
+    url: https://www.aldec.com/en/support/training/webinars
+    desc: First part of an Aldec webinar series covering practical co-simulation techniques for verification
+      using OSVVM.
     tags:
-    - rtl
     - verif
 
-  # --- Week of Aug 24, 2026 ------------
   - name: Hot Chips 2026 (HC38)
-    date: '2026-08-24'
-    week_of: '2026-08-24'
-    date_display: Aug 23 to 25, 2026 · Stanford, CA
+    date: '2026-08-23'
+    week_of: '2026-08-17'
+    date_display: Aug 23, 2026 · Palo Alto, CA
     mode: local
-    location: Memorial Auditorium, Stanford University, Palo Alto, CA
+    location: Stanford University, Palo Alto, CA
     url: https://hotchips.org/
-    desc: Marquee symposium on high-performance processors, AI accelerators, and custom silicon, hybrid
-      in-person and virtual.
+    desc: Annual symposium on high performance chips featuring the latest processor, accelerator, and system
+      architectures, also streamed live.
     tags:
     - arch
+
+  # --- Week of Aug 24, 2026 ------------
+  - name: 'SEMI Webinar: From Automated to Autonomous, Rethinking Fab Design for the Future'
+    date: '2026-08-25'
+    week_of: '2026-08-24'
+    date_display: Aug 25, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.semi.org/en/expositions-events/calendar
+    desc: SEMI virtual session on how autonomous design and automation approaches are reshaping semiconductor
+      fab design.
+    tags:
     - asic
 
   - name: 'Aldec Webinar: Simplifying DO-254 Compliance for FPGA Designs'
@@ -124,47 +109,47 @@ events:
     date_display: Aug 26, 2026 · online
     mode: online
     location: Online
-    url: https://events.teams.microsoft.com/event/32da3010-66d5-4e8e-9865-cfca943baacc@81539b6f-c580-4912-b12f-f323cf32ce96
-    desc: Aldec webinar on practical approaches to DO-254 compliance for FPGA based designs.
+    url: https://www.aldec.com/en/support/training/webinars
+    desc: Aldec webinar on a practical approach to simplifying DO-254 compliance for FPGA based designs.
     tags:
     - verif
     - rtl
 
-  - name: Semiconductor-MedTech Ecosystem Summit 2026
+  - name: Semiconductor-MedTech Ecosystem Summit
     date: '2026-08-27'
     week_of: '2026-08-24'
     date_display: Aug 27, 2026 · Milpitas, CA
     mode: local
     location: SEMI Headquarters, Milpitas, CA
     url: https://www.semi.org/en/event/semiconductor-medtech-ecosystem-summit
-    desc: SEMI Smart MedTech summit connecting semiconductor and medical device leaders on advanced chip
-      and packaging technology for medical devices.
+    desc: SEMI summit connecting semiconductor foundries and MedTech makers to accelerate next generation
+      medical device silicon.
     tags:
     - asic
 
   # --- Week of Aug 31, 2026 ------------
-  - name: GlobalFoundries Technology Summit 2026
+  - name: GlobalFoundries Technology Summit 2026, North America
     date: '2026-09-02'
     week_of: '2026-08-31'
     date_display: Sep 02, 2026 · Santa Clara, CA
     mode: local
     location: Santa Clara, CA
-    url: https://gf.com/globalfoundries-technology-summit/
-    desc: GlobalFoundries' annual flagship event on foundry technology, design enablement, and customer
-      ecosystem updates.
+    url: https://gf.com/news-and-events/events/gts-north-america/
+    desc: GlobalFoundries flagship technology summit covering process innovations and end to end ecosystem
+      partnerships.
     tags:
     - asic
 
-  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 2 (RISC-V Co-Development)'
+  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 2'
     date: '2026-09-03'
     week_of: '2026-08-31'
     date_display: Sep 03, 2026 · online
     mode: online
     location: Online
-    url: https://resources.aldec.com/acton/media/23474/practical-co-simulation-techniques-with-osvvm-part-2-risc-v-software-and-logic-co-development-us
-    desc: Aldec webinar on co-simulating RISC-V software with RTL logic using OSVVM.
+    url: https://www.aldec.com/en/support/training/webinars
+    desc: Second part of the Aldec webinar series covering practical co-simulation techniques for verification
+      using OSVVM.
     tags:
-    - rtl
     - verif
 
   # --- Week of Sep 07, 2026 ------------
@@ -175,11 +160,10 @@ events:
     mode: local
     location: San Jose, CA
     url: https://www.semi.org/en/event/future-computing-2026
-    desc: SEMI workshop uniting the AI compute ecosystem across devices, packaging, photonics, and architectures
-      for system-technology co-optimization.
+    desc: SEMI and City of San Jose hybrid event exploring next generation computing architectures and semiconductor
+      demand.
     tags:
     - arch
-    - asic
 
   - name: 'ESD Alliance Webinar: Gen-AI for Chip Design and Security'
     date: '2026-09-10'
@@ -187,15 +171,26 @@ events:
     date_display: Sep 10, 2026 · online
     mode: online
     location: Online
-    url: https://www.semi.org/en/communities/esda
-    desc: SEMI ESD Alliance webinar on how generative and agentic AI are changing chip design workflows
-      and hardware security.
+    url: https://www.semi.org/en/expositions-events/calendar
+    desc: SEMI ESD Alliance webinar on how generative AI is reshaping chip design workflows and hardware
+      security.
     tags:
     - eda
-    - rtl
     - verif
 
   # --- Week of Sep 14, 2026 ------------
+  - name: 'SEMI Course: Understanding Semiconductor Technology and Business, Europe'
+    date: '2026-09-14'
+    week_of: '2026-09-14'
+    date_display: Sep 14, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.semi.org/en/semi-university/course-calendar
+    desc: SEMI University virtual course covering semiconductor design, fabrication, and business fundamentals,
+      Europe session.
+    tags:
+    - asic
+
   - name: AI Infra Summit 2026
     date: '2026-09-15'
     week_of: '2026-09-14'
@@ -203,37 +198,36 @@ events:
     mode: local
     location: Santa Clara Convention Center, Santa Clara, CA
     url: https://www.ai-infra-summit.com/
-    desc: Conference on AI compute infrastructure, covering silicon, advanced packaging, and system-level
-      design for data centers.
+    desc: Three day summit on AI infrastructure covering silicon, advanced packaging, and system level design
+      for AI compute.
     tags:
     - arch
-    - asic
-
-  - name: Automotive Electronics Forum 2026
-    date: '2026-09-17'
-    week_of: '2026-09-14'
-    date_display: Sep 17, 2026 · Santa Clara, CA
-    mode: local
-    location: Agilent/Keysight Campus, Santa Clara, CA
-    url: https://www.jedec.org/auto-forum-2026
-    desc: JEDEC forum on semiconductor and memory standards for automotive electronics, covering reliability
-      and system design.
-    tags:
-    - asic
 
   # --- Week of Sep 21, 2026 ------------
-  - name: GSA US Executive Forum 2026
+  - name: GSA U.S. Executive Forum 2026
     date: '2026-09-22'
     week_of: '2026-09-21'
     date_display: Sep 22, 2026 · Menlo Park, CA
     mode: local
     location: Rosewood Sand Hill, Menlo Park, CA
     url: https://www.gsaglobal.org/events/
-    desc: Global Semiconductor Alliance executive forum bringing together industry leaders to discuss semiconductor
-      ecosystem trends.
+    desc: Global Semiconductor Alliance forum bringing together industry executives for candid discussion
+      on chip industry challenges.
     tags:
     - asic
-    tentative: true
+
+  - name: 'SEMI Virtual Training: Chiplet and Heterogeneous Integration for Microelectronics Packaging'
+    date: '2026-09-22'
+    week_of: '2026-09-21'
+    date_display: Sep 22, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.semi.org/en/event/chiplet-and-heterogenous-integration-microelectronics-packaging-virtual-training-us
+    desc: SEMI virtual training on chiplets, interconnects, materials, and heterogeneous integration for
+      advanced packaging.
+    tags:
+    - pd
+    - asic
 
   - name: TSMC 2026 North America OIP Ecosystem Forum
     date: '2026-09-23'
@@ -241,26 +235,28 @@ events:
     date_display: Sep 23, 2026 · Santa Clara, CA
     mode: local
     location: Santa Clara Convention Center, Santa Clara, CA
-    url: https://pr.tsmc.com/english/events/tsmc-events
-    desc: TSMC's annual Open Innovation Platform forum showcasing process, design enablement, and EDA ecosystem
-      updates for advanced nodes.
+    url: https://www.tsmc.com/static/english/campaign/oip2026/index.html
+    desc: TSMC foundry ecosystem forum connecting chip design teams with EDA, IP, and packaging partners
+      on the latest process technologies.
     tags:
-    - asic
     - eda
+    - asic
+    - pd
+
+  - name: Glass-Core Packaging and Its Reliability
+    date: '2026-09-24'
+    week_of: '2026-09-21'
+    date_display: Sep 24, 2026 · Milpitas, CA
+    mode: local
+    location: SEMI, Milpitas, CA
+    url: https://r6.ieee.org/scv-eps/
+    desc: IEEE Electronics Packaging Society Silicon Valley chapter talk on glass core substrates, interposers,
+      and reliability outlook.
+    tags:
+    - pd
+    - asic
 
   # --- Week of Oct 12, 2026 ------------
-  - name: OCP Global Summit 2026
-    date: '2026-10-12'
-    week_of: '2026-10-12'
-    date_display: Oct 12 to 15, 2026 · San Jose, CA
-    mode: local
-    location: San Jose Convention Center, San Jose, CA
-    url: https://www.opencompute.org/summit/global-summit
-    desc: Open Compute Project's flagship summit on open hardware and system architecture for AI and data
-      center infrastructure.
-    tags:
-    - arch
-
   - name: SEMICON West 2026
     date: '2026-10-13'
     week_of: '2026-10-12'
@@ -268,22 +264,8 @@ events:
     mode: local
     location: Moscone Center, San Francisco, CA
     url: https://www.semiconwest.org/
-    desc: Major semiconductor industry trade show covering manufacturing, packaging, and emerging microelectronics
-      technology.
+    desc: SEMI flagship exposition spotlighting semiconductor manufacturing, packaging, and design innovations
+      across the industry.
     tags:
     - asic
-
-  # --- Week of Nov 09, 2026 ------------
-  - name: ICCAD 2026 (IEEE/ACM International Conference on Computer-Aided Design)
-    date: '2026-11-09'
-    week_of: '2026-11-09'
-    date_display: Nov 09, 2026 · San Jose, CA
-    mode: local
-    location: San Jose, CA
-    url: https://iccad.com/2026
-    desc: Premier conference on electronic design automation technical innovations, covering RTL to physical
-      design and verification.
-    tags:
-    - eda
     - pd
-    - papers
