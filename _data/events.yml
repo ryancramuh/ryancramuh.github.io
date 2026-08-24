@@ -23,74 +23,11 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-08-17"
-this_week: "2026-08-17"
+refreshed: "2026-08-24"
+this_week: "2026-08-24"
 
 events:
-  # --- Week of Aug 17, 2026  (current) ------------
-  - name: 'Build Better Chips: Careers in Silicon Chip Design and Semiconductor Engineering'
-    date: '2026-08-17'
-    week_of: '2026-08-17'
-    date_display: Aug 17, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.ucsc-extension.edu/events/build-better-chips-0
-    desc: UCSC Silicon Valley Extension panel on industry trends, emerging skills, and career paths in silicon
-      chip design and semiconductor engineering.
-    tags:
-    - rtl
-    - asic
-
-  - name: 'Aldec Webinar: Why Transaction-Level Modeling Will Be Necessary'
-    date: '2026-08-19'
-    week_of: '2026-08-17'
-    date_display: Aug 19, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.aldec.com/en/support/training/webinars
-    desc: Aldec webinar on the growing role of transaction level modeling in chip design and verification
-      flows.
-    tags:
-    - rtl
-    - verif
-
-  - name: Hot Interconnects 2026 (HotI, IEEE Symposium on High-Performance Interconnects)
-    date: '2026-08-19'
-    week_of: '2026-08-17'
-    date_display: Aug 19, 2026 · online
-    mode: online
-    location: Online
-    url: https://hoti.org/2026/
-    desc: 33rd IEEE symposium on high performance interconnects for computing systems, held fully virtually
-      this year.
-    tags:
-    - arch
-
-  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 1'
-    date: '2026-08-20'
-    week_of: '2026-08-17'
-    date_display: Aug 20, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.aldec.com/en/support/training/webinars
-    desc: First part of an Aldec webinar series covering practical co-simulation techniques for verification
-      using OSVVM.
-    tags:
-    - verif
-
-  - name: Hot Chips 2026 (HC38)
-    date: '2026-08-23'
-    week_of: '2026-08-17'
-    date_display: Aug 23, 2026 · Palo Alto, CA
-    mode: local
-    location: Stanford University, Palo Alto, CA
-    url: https://hotchips.org/
-    desc: Annual symposium on high performance chips featuring the latest processor, accelerator, and system
-      architectures, also streamed live.
-    tags:
-    - arch
-
-  # --- Week of Aug 24, 2026 ------------
+  # --- Week of Aug 24, 2026  (current) ------------
   - name: 'SEMI Webinar: From Automated to Autonomous, Rethinking Fab Design for the Future'
     date: '2026-08-25'
     week_of: '2026-08-24'
@@ -127,6 +64,18 @@ events:
     tags:
     - asic
 
+  - name: SEMI Silicon Valley Breakfast Forum
+    date: '2026-08-28'
+    week_of: '2026-08-24'
+    date_display: Aug 28, 2026 · Milpitas, CA
+    mode: local
+    location: SEMI Headquarters, Milpitas, CA
+    url: https://www.semi.org/en/event/silicon-valley-breakfast-forum
+    desc: SEMI's Silicon Valley chapter breakfast forum bringing local semiconductor industry leaders together
+      for panel discussion and networking.
+    tags:
+    - asic
+
   # --- Week of Aug 31, 2026 ------------
   - name: GlobalFoundries Technology Summit 2026, North America
     date: '2026-09-02'
@@ -140,17 +89,19 @@ events:
     tags:
     - asic
 
-  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 2'
+  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 2 (RISC-V Software and Logic
+      Co-Development)'
     date: '2026-09-03'
     week_of: '2026-08-31'
     date_display: Sep 03, 2026 · online
     mode: online
     location: Online
     url: https://www.aldec.com/en/support/training/webinars
-    desc: Second part of the Aldec webinar series covering practical co-simulation techniques for verification
-      using OSVVM.
+    desc: Second part of the Aldec webinar series covering practical co-simulation techniques for RISC-V
+      software and logic co-development.
     tags:
     - verif
+    - rtl
 
   # --- Week of Sep 07, 2026 ------------
   - name: Future of Computing 2026
@@ -165,15 +116,15 @@ events:
     tags:
     - arch
 
-  - name: 'ESD Alliance Webinar: Gen-AI for Chip Design and Security'
+  - name: 'ESD Alliance Webinar: Savage on Security, Gen-AI for Chip Design and Security'
     date: '2026-09-10'
     week_of: '2026-09-07'
     date_display: Sep 10, 2026 · online
     mode: online
     location: Online
-    url: https://www.semi.org/en/expositions-events/calendar
-    desc: SEMI ESD Alliance webinar on how generative AI is reshaping chip design workflows and hardware
-      security.
+    url: https://www.semi.org/en/communities/esda
+    desc: SEMI ESD Alliance Savage on Security webinar with Warren Savage and Mark Tehranipoor on multi-agent
+      AI systems for SoC design and security verification.
     tags:
     - eda
     - verif
@@ -203,6 +154,19 @@ events:
     tags:
     - arch
 
+  - name: 'Synopsys Webinar: Shift Left to Ship Faster, Verifying IP and SoCs at Real Workload Speeds'
+    date: '2026-09-15'
+    week_of: '2026-09-14'
+    date_display: Sep 15, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.synopsys.com/webinars.html
+    desc: Synopsys webinar on verifying IP and SoCs at real workload speeds to shift verification left and
+      ship faster.
+    tags:
+    - verif
+    - asic
+
   # --- Week of Sep 21, 2026 ------------
   - name: GSA U.S. Executive Forum 2026
     date: '2026-09-22'
@@ -229,6 +193,19 @@ events:
     - pd
     - asic
 
+  - name: Siemens EDA User2User Conference, North America
+    date: '2026-09-23'
+    week_of: '2026-09-21'
+    date_display: Sep 23, 2026 · online
+    mode: online
+    location: Online
+    url: https://events.sw.siemens.com/en-US/u2uconference/north-america/
+    desc: Siemens EDA's virtual User2User conference where the electronic design community shares real world
+      experience across 3D IC, AI, and connected verification.
+    tags:
+    - eda
+    - verif
+
   - name: TSMC 2026 North America OIP Ecosystem Forum
     date: '2026-09-23'
     week_of: '2026-09-21'
@@ -243,18 +220,32 @@ events:
     - asic
     - pd
 
-  - name: Glass-Core Packaging and Its Reliability
+  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 3 (Introduction to Protocol
+      Verification with Co-Simulation)'
     date: '2026-09-24'
     week_of: '2026-09-21'
-    date_display: Sep 24, 2026 · Milpitas, CA
-    mode: local
-    location: SEMI, Milpitas, CA
-    url: https://r6.ieee.org/scv-eps/
-    desc: IEEE Electronics Packaging Society Silicon Valley chapter talk on glass core substrates, interposers,
-      and reliability outlook.
+    date_display: Sep 24, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.aldec.com/en/support/training/webinars
+    desc: Third part of the Aldec webinar series introducing protocol verification techniques through co-simulation.
     tags:
-    - pd
-    - asic
+    - verif
+
+  # --- Week of Oct 05, 2026 ------------
+  - name: Verification and Semiconductor Futures Conference, San Jose
+    date: '2026-10-08'
+    week_of: '2026-10-05'
+    date_display: Oct 08, 2026 · Milpitas, CA
+    mode: local
+    location: Sonesta San Jose, Milpitas, CA
+    url: https://www.tessolve.com/verification-futures/
+    desc: Verification and Semiconductor Futures conference covering formal methods, CPU and RISC-V verification,
+      and AI in design verification, with an online option.
+    tags:
+    - verif
+    - rtl
+    - arch
 
   # --- Week of Oct 12, 2026 ------------
   - name: SEMICON West 2026
@@ -269,3 +260,17 @@ events:
     tags:
     - asic
     - pd
+
+  # --- Week of Oct 19, 2026 ------------
+  - name: 'CadenceCONNECT: Jasper User Group San Jose 2026'
+    date: '2026-10-21'
+    week_of: '2026-10-19'
+    date_display: Oct 21, 2026 · San Jose, CA
+    mode: local
+    location: Cadence Design Systems, San Jose, CA
+    url: https://www.cadence.com/en_US/home/company/events.html
+    desc: Cadence's annual Jasper User Group gathering at its San Jose headquarters focused on formal verification
+      methodology and applications.
+    tags:
+    - verif
+    - eda
