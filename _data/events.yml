@@ -23,60 +23,11 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-08-24"
-this_week: "2026-08-24"
+refreshed: "2026-08-31"
+this_week: "2026-08-31"
 
 events:
-  # --- Week of Aug 24, 2026  (current) ------------
-  - name: 'SEMI Webinar: From Automated to Autonomous, Rethinking Fab Design for the Future'
-    date: '2026-08-25'
-    week_of: '2026-08-24'
-    date_display: Aug 25, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.semi.org/en/expositions-events/calendar
-    desc: SEMI virtual session on how autonomous design and automation approaches are reshaping semiconductor
-      fab design.
-    tags:
-    - asic
-
-  - name: 'Aldec Webinar: Simplifying DO-254 Compliance for FPGA Designs'
-    date: '2026-08-26'
-    week_of: '2026-08-24'
-    date_display: Aug 26, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.aldec.com/en/support/training/webinars
-    desc: Aldec webinar on a practical approach to simplifying DO-254 compliance for FPGA based designs.
-    tags:
-    - verif
-    - rtl
-
-  - name: Semiconductor-MedTech Ecosystem Summit
-    date: '2026-08-27'
-    week_of: '2026-08-24'
-    date_display: Aug 27, 2026 · Milpitas, CA
-    mode: local
-    location: SEMI Headquarters, Milpitas, CA
-    url: https://www.semi.org/en/event/semiconductor-medtech-ecosystem-summit
-    desc: SEMI summit connecting semiconductor foundries and MedTech makers to accelerate next generation
-      medical device silicon.
-    tags:
-    - asic
-
-  - name: SEMI Silicon Valley Breakfast Forum
-    date: '2026-08-28'
-    week_of: '2026-08-24'
-    date_display: Aug 28, 2026 · Milpitas, CA
-    mode: local
-    location: SEMI Headquarters, Milpitas, CA
-    url: https://www.semi.org/en/event/silicon-valley-breakfast-forum
-    desc: SEMI's Silicon Valley chapter breakfast forum bringing local semiconductor industry leaders together
-      for panel discussion and networking.
-    tags:
-    - asic
-
-  # --- Week of Aug 31, 2026 ------------
+  # --- Week of Aug 31, 2026  (current) ------------
   - name: GlobalFoundries Technology Summit 2026, North America
     date: '2026-09-02'
     week_of: '2026-08-31'
@@ -104,6 +55,19 @@ events:
     - rtl
 
   # --- Week of Sep 07, 2026 ------------
+  - name: 'Cadence System Realization Alliance Webinar: XtremeEDA on System Realization'
+    date: '2026-09-08'
+    week_of: '2026-09-07'
+    date_display: Sep 08, 2026 · online
+    mode: online
+    location: Online
+    url: https://community.cadence.com/cadence_technology_forums/f/hardware-software-co-development-verification-and-integration/16719/webinar-by-xtremeeda-on-system-realization-on-september-8th
+    desc: XtremeEDA webinar hosted with Cadence's System Realization Alliance on hardware and software co-development,
+      verification, and integration.
+    tags:
+    - verif
+    - asic
+
   - name: Future of Computing 2026
     date: '2026-09-09'
     week_of: '2026-09-07'
@@ -165,6 +129,18 @@ events:
       ship faster.
     tags:
     - verif
+    - asic
+
+  - name: JEDEC Automotive Electronics Forum
+    date: '2026-09-17'
+    week_of: '2026-09-14'
+    date_display: Sep 17, 2026 · Santa Clara, CA
+    mode: local
+    location: Keysight/Agilent Campus, Santa Clara, CA
+    url: https://www.jedec.org/auto-agenda-2026
+    desc: JEDEC forum on automotive electronics covering ADAS, AI, and next generation memory with OEMs
+      and chipmakers.
+    tags:
     - asic
 
   # --- Week of Sep 21, 2026 ------------
@@ -232,6 +208,20 @@ events:
     tags:
     - verif
 
+  # --- Week of Sep 28, 2026 ------------
+  - name: 'SEMI Webinar: Scaling Smarter Maintenance in Semiconductor Facilities with AI Agents'
+    date: '2026-09-30'
+    week_of: '2026-09-28'
+    date_display: Sep 30, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.semi.org/en/expositions-events/calendar
+    desc: SEMI virtual session on agentic AI approaches for scaling predictive and smart maintenance across
+      semiconductor fabs.
+    tags:
+    - asic
+    tentative: true
+
   # --- Week of Oct 05, 2026 ------------
   - name: Verification and Semiconductor Futures Conference, San Jose
     date: '2026-10-08'
@@ -239,7 +229,7 @@ events:
     date_display: Oct 08, 2026 · Milpitas, CA
     mode: local
     location: Sonesta San Jose, Milpitas, CA
-    url: https://www.tessolve.com/verification-futures/
+    url: https://www.tessolve.com/verification-futures/vf2026-san-jose
     desc: Verification and Semiconductor Futures conference covering formal methods, CPU and RISC-V verification,
       and AI in design verification, with an online option.
     tags:
@@ -248,6 +238,18 @@ events:
     - arch
 
   # --- Week of Oct 12, 2026 ------------
+  - name: OCP Global Summit 2026
+    date: '2026-10-12'
+    week_of: '2026-10-12'
+    date_display: Oct 12, 2026 · San Jose, CA
+    mode: local
+    location: San Jose McEnery Convention Center, San Jose, CA
+    url: https://www.opencompute.org/summit/global-summit
+    desc: Open Compute Project's annual summit on open source hardware, rack scale infrastructure, and silicon
+      for AI data centers.
+    tags:
+    - arch
+
   - name: SEMICON West 2026
     date: '2026-10-13'
     week_of: '2026-10-12'
@@ -274,3 +276,4 @@ events:
     tags:
     - verif
     - eda
+    tentative: true
