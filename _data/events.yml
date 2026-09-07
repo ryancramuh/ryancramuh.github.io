@@ -23,38 +23,11 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-08-31"
-this_week: "2026-08-31"
+refreshed: "2026-09-07"
+this_week: "2026-09-07"
 
 events:
-  # --- Week of Aug 31, 2026  (current) ------------
-  - name: GlobalFoundries Technology Summit 2026, North America
-    date: '2026-09-02'
-    week_of: '2026-08-31'
-    date_display: Sep 02, 2026 · Santa Clara, CA
-    mode: local
-    location: Santa Clara, CA
-    url: https://gf.com/news-and-events/events/gts-north-america/
-    desc: GlobalFoundries flagship technology summit covering process innovations and end to end ecosystem
-      partnerships.
-    tags:
-    - asic
-
-  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 2 (RISC-V Software and Logic
-      Co-Development)'
-    date: '2026-09-03'
-    week_of: '2026-08-31'
-    date_display: Sep 03, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.aldec.com/en/support/training/webinars
-    desc: Second part of the Aldec webinar series covering practical co-simulation techniques for RISC-V
-      software and logic co-development.
-    tags:
-    - verif
-    - rtl
-
-  # --- Week of Sep 07, 2026 ------------
+  # --- Week of Sep 07, 2026  (current) ------------
   - name: 'Cadence System Realization Alliance Webinar: XtremeEDA on System Realization'
     date: '2026-09-08'
     week_of: '2026-09-07'
@@ -75,61 +48,49 @@ events:
     mode: local
     location: San Jose, CA
     url: https://www.semi.org/en/event/future-computing-2026
-    desc: SEMI and City of San Jose hybrid event exploring next generation computing architectures and semiconductor
-      demand.
+    desc: SEMI and City of San Jose event on next generation computing, uniting devices, packaging, photonics,
+      and architectures across the AI ecosystem.
     tags:
     - arch
 
-  - name: 'ESD Alliance Webinar: Savage on Security, Gen-AI for Chip Design and Security'
+  - name: 'ESD Alliance Webinar: Gen-AI for Chip Design and Hardware Security'
     date: '2026-09-10'
     week_of: '2026-09-07'
     date_display: Sep 10, 2026 · online
     mode: online
     location: Online
     url: https://www.semi.org/en/communities/esda
-    desc: SEMI ESD Alliance Savage on Security webinar with Warren Savage and Mark Tehranipoor on multi-agent
-      AI systems for SoC design and security verification.
+    desc: SEMI ESD Alliance webinar with Warren Savage and Mark Tehranipoor on multi-agent AI for SoC design,
+      threat modeling, and security verification.
     tags:
-    - eda
     - verif
-
-  # --- Week of Sep 14, 2026 ------------
-  - name: 'SEMI Course: Understanding Semiconductor Technology and Business, Europe'
-    date: '2026-09-14'
-    week_of: '2026-09-14'
-    date_display: Sep 14, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.semi.org/en/semi-university/course-calendar
-    desc: SEMI University virtual course covering semiconductor design, fabrication, and business fundamentals,
-      Europe session.
-    tags:
     - asic
 
+  # --- Week of Sep 14, 2026 ------------
   - name: AI Infra Summit 2026
     date: '2026-09-15'
     week_of: '2026-09-14'
-    date_display: Sep 15, 2026 · Santa Clara, CA
+    date_display: Sep 15 to 17, 2026 · Santa Clara, CA
     mode: local
     location: Santa Clara Convention Center, Santa Clara, CA
     url: https://www.ai-infra-summit.com/
-    desc: Three day summit on AI infrastructure covering silicon, advanced packaging, and system level design
-      for AI compute.
+    desc: Full-stack AI infrastructure conference covering compute, data movement, physical AI, and custom
+      silicon for AI data centers.
     tags:
     - arch
 
-  - name: 'Synopsys Webinar: Shift Left to Ship Faster, Verifying IP and SoCs at Real Workload Speeds'
-    date: '2026-09-15'
+  - name: 'Aldec Webinar: Constrained Random and Functional Coverage with Python and cocotb'
+    date: '2026-09-16'
     week_of: '2026-09-14'
-    date_display: Sep 15, 2026 · online
+    date_display: Sep 16, 2026 · online
     mode: online
     location: Online
-    url: https://www.synopsys.com/webinars.html
-    desc: Synopsys webinar on verifying IP and SoCs at real workload speeds to shift verification left and
-      ship faster.
+    url: https://www.aldec.com/en/support/training/webinars
+    desc: Aldec webinar on building constrained random testbenches and functional coverage using Python
+      and the cocotb verification framework.
     tags:
     - verif
-    - asic
+    - rtl
 
   - name: JEDEC Automotive Electronics Forum
     date: '2026-09-17'
@@ -138,49 +99,23 @@ events:
     mode: local
     location: Keysight/Agilent Campus, Santa Clara, CA
     url: https://www.jedec.org/auto-agenda-2026
-    desc: JEDEC forum on automotive electronics covering ADAS, AI, and next generation memory with OEMs
-      and chipmakers.
+    desc: JEDEC forum on automotive electronics covering ADAS, AI capabilities, and next-generation memory
+      with speakers from OEMs and chipmakers.
     tags:
     - asic
 
   # --- Week of Sep 21, 2026 ------------
-  - name: GSA U.S. Executive Forum 2026
-    date: '2026-09-22'
-    week_of: '2026-09-21'
-    date_display: Sep 22, 2026 · Menlo Park, CA
-    mode: local
-    location: Rosewood Sand Hill, Menlo Park, CA
-    url: https://www.gsaglobal.org/events/
-    desc: Global Semiconductor Alliance forum bringing together industry executives for candid discussion
-      on chip industry challenges.
-    tags:
-    - asic
-
-  - name: 'SEMI Virtual Training: Chiplet and Heterogeneous Integration for Microelectronics Packaging'
-    date: '2026-09-22'
-    week_of: '2026-09-21'
-    date_display: Sep 22, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.semi.org/en/event/chiplet-and-heterogenous-integration-microelectronics-packaging-virtual-training-us
-    desc: SEMI virtual training on chiplets, interconnects, materials, and heterogeneous integration for
-      advanced packaging.
-    tags:
-    - pd
-    - asic
-
-  - name: Siemens EDA User2User Conference, North America
+  - name: 'Siemens EDA: Introduction to EDM Data Modeling'
     date: '2026-09-23'
     week_of: '2026-09-21'
-    date_display: Sep 23, 2026 · online
-    mode: online
-    location: Online
-    url: https://events.sw.siemens.com/en-US/u2uconference/north-america/
-    desc: Siemens EDA's virtual User2User conference where the electronic design community shares real world
-      experience across 3D IC, AI, and connected verification.
+    date_display: Sep 23, 2026 · Santa Clara, CA
+    mode: local
+    location: Siemens EDA, Santa Clara, CA
+    url: https://www.siemens.com/en-us/events/eda/
+    desc: Siemens EDA session covering how EDM Library structures data and relationships in a practical
+      data model for design management.
     tags:
     - eda
-    - verif
 
   - name: TSMC 2026 North America OIP Ecosystem Forum
     date: '2026-09-23'
@@ -189,91 +124,113 @@ events:
     mode: local
     location: Santa Clara Convention Center, Santa Clara, CA
     url: https://www.tsmc.com/static/english/campaign/oip2026/index.html
-    desc: TSMC foundry ecosystem forum connecting chip design teams with EDA, IP, and packaging partners
-      on the latest process technologies.
+    desc: TSMC's Open Innovation Platform forum connecting chip design teams with EDA, IP, and packaging
+      partners on TSMC process technology.
     tags:
-    - eda
     - asic
-    - pd
+    - eda
 
-  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 3 (Introduction to Protocol
-      Verification with Co-Simulation)'
+  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 3 (Protocol Verification with
+      Co-Simulation)'
     date: '2026-09-24'
     week_of: '2026-09-21'
     date_display: Sep 24, 2026 · online
     mode: online
     location: Online
     url: https://www.aldec.com/en/support/training/webinars
-    desc: Third part of the Aldec webinar series introducing protocol verification techniques through co-simulation.
+    desc: Third part of Aldec's OSVVM co-simulation webinar series, introducing protocol verification through
+      co-simulation techniques.
     tags:
     - verif
+    - rtl
 
   # --- Week of Sep 28, 2026 ------------
-  - name: 'SEMI Webinar: Scaling Smarter Maintenance in Semiconductor Facilities with AI Agents'
+  - name: 'Aldec Webinar: SystemVerilog Interface Introductory Seminar'
     date: '2026-09-30'
     week_of: '2026-09-28'
     date_display: Sep 30, 2026 · online
     mode: online
     location: Online
-    url: https://www.semi.org/en/expositions-events/calendar
-    desc: SEMI virtual session on agentic AI approaches for scaling predictive and smart maintenance across
-      semiconductor fabs.
+    url: https://www.aldec.com/en/support/training/webinars
+    desc: Introductory Aldec seminar on using SystemVerilog interfaces in RTL design and verification environments.
     tags:
-    - asic
-    tentative: true
+    - rtl
+    - verif
 
-  # --- Week of Oct 05, 2026 ------------
-  - name: Verification and Semiconductor Futures Conference, San Jose
-    date: '2026-10-08'
-    week_of: '2026-10-05'
-    date_display: Oct 08, 2026 · Milpitas, CA
+  - name: Synopsys PrimeTime Nexus
+    date: '2026-09-30'
+    week_of: '2026-09-28'
+    date_display: Sep 30, 2026 · Sunnyvale, CA
     mode: local
-    location: Sonesta San Jose, Milpitas, CA
-    url: https://www.tessolve.com/verification-futures/vf2026-san-jose
-    desc: Verification and Semiconductor Futures conference covering formal methods, CPU and RISC-V verification,
-      and AI in design verification, with an online option.
+    location: Synopsys Building 1, Sunnyvale, CA
+    url: https://www.synopsys.com/events/primetime-nexus.html
+    desc: In-person half-day Synopsys event on PrimeTime and the evolving demands of static timing analysis
+      signoff.
+    tags:
+    - pd
+    - eda
+
+  - name: 'Verification Academy Weekly Webinar: Did You Know QuestaSim Supports VHDL-2019?'
+    date: '2026-10-01'
+    week_of: '2026-09-28'
+    date_display: Oct 01, 2026 · online
+    mode: online
+    location: Online
+    url: https://verificationacademy.com/all-content/?content_type=Webinar
+    desc: Opening session of Siemens Verification Academy's fall weekly webinar series, covering VHDL-2019
+      support in QuestaSim.
     tags:
     - verif
     - rtl
+
+  # --- Week of Oct 05, 2026 ------------
+  - name: Verification & Semiconductor Futures Conference, Austin
+    date: '2026-10-06'
+    week_of: '2026-10-05'
+    date_display: Oct 06, 2026 · online
+    mode: online
+    location: Online (hybrid with Hilton Austin Airport, Austin, TX)
+    url: https://www.tessolve.com/verification-futures/vf2026-austin/
+    desc: Hybrid verification and semiconductor conference covering formal methods, CPU and RISC-V verification,
+      and AI in design verification, with an online attendance option.
+    tags:
+    - verif
     - arch
 
   # --- Week of Oct 12, 2026 ------------
-  - name: OCP Global Summit 2026
+  - name: 2026 OCP Global Summit
     date: '2026-10-12'
     week_of: '2026-10-12'
-    date_display: Oct 12, 2026 · San Jose, CA
+    date_display: Oct 12 to 15, 2026 · San Jose, CA
     mode: local
     location: San Jose McEnery Convention Center, San Jose, CA
     url: https://www.opencompute.org/summit/global-summit
-    desc: Open Compute Project's annual summit on open source hardware, rack scale infrastructure, and silicon
-      for AI data centers.
+    desc: Open Compute Project's flagship summit on open hardware and infrastructure at scale, including
+      custom silicon and design verification sessions.
     tags:
     - arch
+    - verif
 
   - name: SEMICON West 2026
     date: '2026-10-13'
     week_of: '2026-10-12'
-    date_display: Oct 13, 2026 · San Francisco, CA
+    date_display: Oct 13 to 15, 2026 · San Francisco, CA
     mode: local
     location: Moscone Center, San Francisco, CA
     url: https://www.semiconwest.org/
-    desc: SEMI flagship exposition spotlighting semiconductor manufacturing, packaging, and design innovations
-      across the industry.
+    desc: SEMI's major semiconductor industry event covering advanced manufacturing, packaging, and the
+      path toward two trillion dollars in industry revenue.
     tags:
     - asic
-    - pd
 
-  # --- Week of Oct 19, 2026 ------------
-  - name: 'CadenceCONNECT: Jasper User Group San Jose 2026'
-    date: '2026-10-21'
-    week_of: '2026-10-19'
-    date_display: Oct 21, 2026 · San Jose, CA
+  - name: PDF Solutions CONNECT 2026
+    date: '2026-10-15'
+    week_of: '2026-10-12'
+    date_display: Oct 15 to 16, 2026 · San Francisco, CA
     mode: local
-    location: Cadence Design Systems, San Jose, CA
-    url: https://www.cadence.com/en_US/home/company/events.html
-    desc: Cadence's annual Jasper User Group gathering at its San Jose headquarters focused on formal verification
-      methodology and applications.
+    location: San Francisco, CA
+    url: https://events.pdf.com/connect2026/
+    desc: PDF Solutions conference on AI-driven semiconductor manufacturing analytics, featuring its next-generation
+      Exensio Aurora platform.
     tags:
-    - verif
-    - eda
-    tentative: true
+    - asic
