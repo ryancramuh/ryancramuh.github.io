@@ -23,50 +23,11 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-09-07"
-this_week: "2026-09-07"
+refreshed: "2026-09-14"
+this_week: "2026-09-14"
 
 events:
-  # --- Week of Sep 07, 2026  (current) ------------
-  - name: 'Cadence System Realization Alliance Webinar: XtremeEDA on System Realization'
-    date: '2026-09-08'
-    week_of: '2026-09-07'
-    date_display: Sep 08, 2026 · online
-    mode: online
-    location: Online
-    url: https://community.cadence.com/cadence_technology_forums/f/hardware-software-co-development-verification-and-integration/16719/webinar-by-xtremeeda-on-system-realization-on-september-8th
-    desc: XtremeEDA webinar hosted with Cadence's System Realization Alliance on hardware and software co-development,
-      verification, and integration.
-    tags:
-    - verif
-    - asic
-
-  - name: Future of Computing 2026
-    date: '2026-09-09'
-    week_of: '2026-09-07'
-    date_display: Sep 09, 2026 · San Jose, CA
-    mode: local
-    location: San Jose, CA
-    url: https://www.semi.org/en/event/future-computing-2026
-    desc: SEMI and City of San Jose event on next generation computing, uniting devices, packaging, photonics,
-      and architectures across the AI ecosystem.
-    tags:
-    - arch
-
-  - name: 'ESD Alliance Webinar: Gen-AI for Chip Design and Hardware Security'
-    date: '2026-09-10'
-    week_of: '2026-09-07'
-    date_display: Sep 10, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.semi.org/en/communities/esda
-    desc: SEMI ESD Alliance webinar with Warren Savage and Mark Tehranipoor on multi-agent AI for SoC design,
-      threat modeling, and security verification.
-    tags:
-    - verif
-    - asic
-
-  # --- Week of Sep 14, 2026 ------------
+  # --- Week of Sep 14, 2026  (current) ------------
   - name: AI Infra Summit 2026
     date: '2026-09-15'
     week_of: '2026-09-14'
@@ -99,23 +60,35 @@ events:
     mode: local
     location: Keysight/Agilent Campus, Santa Clara, CA
     url: https://www.jedec.org/auto-agenda-2026
-    desc: JEDEC forum on automotive electronics covering ADAS, AI capabilities, and next-generation memory
+    desc: JEDEC forum on automotive electronics covering ADAS, AI capabilities, and next generation memory,
       with speakers from OEMs and chipmakers.
     tags:
     - asic
 
   # --- Week of Sep 21, 2026 ------------
-  - name: 'Siemens EDA: Introduction to EDM Data Modeling'
-    date: '2026-09-23'
+  - name: 'IEEE Webinar: Silicon for All, Breaking Barriers in IC Fabrication through Open Silicon'
+    date: '2026-09-21'
     week_of: '2026-09-21'
-    date_display: Sep 23, 2026 · Santa Clara, CA
-    mode: local
-    location: Siemens EDA, Santa Clara, CA
-    url: https://www.siemens.com/en-us/events/eda/
-    desc: Siemens EDA session covering how EDM Library structures data and relationships in a practical
-      data model for design management.
+    date_display: Sep 21, 2026 · online
+    mode: online
+    location: Online
+    url: https://sscs.ieee.org/event/silicon-for-all-breaking-barriers-in-ic-fabrication-through-open-silicon-integrated-circuit-fabrication-through-ieee-division-i-open-silicon-initiative-webinars-for-young-excellence/
+    desc: IEEE Division I Open Silicon Initiative webinar on open-source design tools, PDKs, and accessible
+      fabrication paths from education to tape-out.
     tags:
-    - eda
+    - asic
+
+  - name: 2026 GSA U.S. Executive Forum
+    date: '2026-09-22'
+    week_of: '2026-09-21'
+    date_display: Sep 22, 2026 · Menlo Park, CA
+    mode: local
+    location: Rosewood Sand Hill, Menlo Park, CA
+    url: https://www.gsaglobal.org/events/event/2026-usef/
+    desc: Global Semiconductor Alliance gathering of senior semiconductor executives for high level dialogue
+      on industry strategy and collaboration.
+    tags:
+    - arch
 
   - name: TSMC 2026 North America OIP Ecosystem Forum
     date: '2026-09-23'
@@ -234,3 +207,71 @@ events:
       Exensio Aurora platform.
     tags:
     - asic
+
+  # --- Week of Oct 19, 2026 ------------
+  - name: 'Cadence Webinar: Formal Verification Performance Optimization'
+    date: '2026-10-20'
+    week_of: '2026-10-19'
+    date_display: Oct 20, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.cadence.com/en_US/home/company/events/webinars/formal-verification-performance-optimization-webinar.html
+    desc: Cadence Education Services webinar on using SVA properties and HDL helper code to significantly
+      increase formal verification performance.
+    tags:
+    - verif
+    - eda
+    tentative: true
+
+  - name: 'Siemens EDA Webinar: Benefits and Effects of Introducing Analysis Tools to Power Distribution
+      Network Design'
+    date: '2026-10-20'
+    week_of: '2026-10-19'
+    date_display: Oct 20, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.siemens.com/en-us/events/eda/
+    desc: Siemens EDA session on applying analysis tools to power distribution network design for chip physical
+      design signoff.
+    tags:
+    - pd
+    - eda
+
+  - name: 'CadenceCONNECT: Jasper User Group 2026'
+    date: '2026-10-21'
+    week_of: '2026-10-19'
+    date_display: Oct 21 to 22, 2026 · San Jose, CA
+    mode: local
+    location: Cadence Design Systems HQ, San Jose, CA
+    url: https://www.cvent.com/c/abstracts/1cfdcbc3-530c-40a6-8780-d47e32e752f1
+    desc: Annual in-depth technical conference on Cadence Jasper formal verification technologies and methodologies
+      for designers and verification engineers.
+    tags:
+    - verif
+    - eda
+
+  - name: CASPA 35th Annual Conference and Dinner Banquet
+    date: '2026-10-23'
+    week_of: '2026-10-19'
+    date_display: Oct 23 to 24, 2026 · Santa Clara, CA
+    mode: local
+    location: Santa Clara Convention Center, Santa Clara, CA
+    url: https://caspa.com/acdb-2026-registration
+    desc: Chinese American Semiconductor Professional Association's annual summit on advanced silicon, intelligent
+      systems, and AI infrastructure.
+    tags:
+    - arch
+
+  # --- Week of Feb 08, 2027 ------------
+  - name: ISSCC 2027
+    date: '2027-02-14'
+    week_of: '2027-02-08'
+    date_display: Feb 14 to 18, 2027 · San Francisco, CA
+    mode: local
+    location: San Francisco Marriott Marquis, San Francisco, CA
+    url: https://www.isscc.org/
+    desc: The IEEE International Solid-State Circuits Conference, the premier forum for presenting advances
+      in solid-state and integrated-circuit design.
+    tags:
+    - papers
+    - arch
