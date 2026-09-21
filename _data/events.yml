@@ -23,49 +23,11 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-09-14"
-this_week: "2026-09-14"
+refreshed: "2026-09-21"
+this_week: "2026-09-21"
 
 events:
-  # --- Week of Sep 14, 2026  (current) ------------
-  - name: AI Infra Summit 2026
-    date: '2026-09-15'
-    week_of: '2026-09-14'
-    date_display: Sep 15 to 17, 2026 · Santa Clara, CA
-    mode: local
-    location: Santa Clara Convention Center, Santa Clara, CA
-    url: https://www.ai-infra-summit.com/
-    desc: Full-stack AI infrastructure conference covering compute, data movement, physical AI, and custom
-      silicon for AI data centers.
-    tags:
-    - arch
-
-  - name: 'Aldec Webinar: Constrained Random and Functional Coverage with Python and cocotb'
-    date: '2026-09-16'
-    week_of: '2026-09-14'
-    date_display: Sep 16, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.aldec.com/en/support/training/webinars
-    desc: Aldec webinar on building constrained random testbenches and functional coverage using Python
-      and the cocotb verification framework.
-    tags:
-    - verif
-    - rtl
-
-  - name: JEDEC Automotive Electronics Forum
-    date: '2026-09-17'
-    week_of: '2026-09-14'
-    date_display: Sep 17, 2026 · Santa Clara, CA
-    mode: local
-    location: Keysight/Agilent Campus, Santa Clara, CA
-    url: https://www.jedec.org/auto-agenda-2026
-    desc: JEDEC forum on automotive electronics covering ADAS, AI capabilities, and next generation memory,
-      with speakers from OEMs and chipmakers.
-    tags:
-    - asic
-
-  # --- Week of Sep 21, 2026 ------------
+  # --- Week of Sep 21, 2026  (current) ------------
   - name: 'IEEE Webinar: Silicon for All, Breaking Barriers in IC Fabrication through Open Silicon'
     date: '2026-09-21'
     week_of: '2026-09-21'
@@ -73,7 +35,7 @@ events:
     mode: online
     location: Online
     url: https://sscs.ieee.org/event/silicon-for-all-breaking-barriers-in-ic-fabrication-through-open-silicon-integrated-circuit-fabrication-through-ieee-division-i-open-silicon-initiative-webinars-for-young-excellence/
-    desc: IEEE Division I Open Silicon Initiative webinar on open-source design tools, PDKs, and accessible
+    desc: IEEE Division I Open Silicon Initiative webinar on open source design tools, PDKs, and accessible
       fabrication paths from education to tape-out.
     tags:
     - asic
@@ -118,6 +80,18 @@ events:
     - rtl
 
   # --- Week of Sep 28, 2026 ------------
+  - name: 'IEEE SSCS Technical Webinar: In-Memory Computing for Scalable Next-generation AI Systems'
+    date: '2026-09-28'
+    week_of: '2026-09-28'
+    date_display: Sep 28, 2026 · online
+    mode: online
+    location: Online
+    url: https://sscs.ieee.org/events/category/upcoming-events/
+    desc: IEEE Solid-State Circuits Society technical webinar with Naveen Verma on in-memory computing architectures
+      for scalable AI hardware.
+    tags:
+    - arch
+
   - name: 'Aldec Webinar: SystemVerilog Interface Introductory Seminar'
     date: '2026-09-30'
     week_of: '2026-09-28'
@@ -157,6 +131,19 @@ events:
     - rtl
 
   # --- Week of Oct 05, 2026 ------------
+  - name: 'IEEE SSCS Directions Series: Town Hall Meeting, IEEE Journal of Solid-State Circuits'
+    date: '2026-10-05'
+    week_of: '2026-10-05'
+    date_display: Oct 05, 2026 · online
+    mode: online
+    location: Online
+    url: https://sscs.ieee.org/events/category/upcoming-events/
+    desc: IEEE Solid-State Circuits Society town hall on the direction of the Journal of Solid-State Circuits,
+      open to the community.
+    tags:
+    - papers
+    - arch
+
   - name: Verification & Semiconductor Futures Conference, Austin
     date: '2026-10-06'
     week_of: '2026-10-05'
@@ -183,6 +170,19 @@ events:
     tags:
     - arch
     - verif
+
+  - name: Imec Technology Forum USA 2026
+    date: '2026-10-12'
+    week_of: '2026-10-12'
+    date_display: Oct 12, 2026 · San Francisco, CA
+    mode: local
+    location: San Francisco, CA (held alongside SEMICON West)
+    url: https://www.imecitf.com/semicon-usa
+    desc: Imec's USA technology forum on the AI deep-tech stack from silicon to systems, held alongside
+      SEMICON West with imec researchers and industry partners.
+    tags:
+    - asic
+    - arch
 
   - name: SEMICON West 2026
     date: '2026-10-13'
@@ -221,7 +221,19 @@ events:
     tags:
     - verif
     - eda
-    tentative: true
+
+  - name: PECC Summit 2026 (Optica + APC Photonic-Enabled Cloud Computing Summit)
+    date: '2026-10-20'
+    week_of: '2026-10-19'
+    date_display: Oct 20 to 21, 2026 · Sunnyvale, CA
+    mode: local
+    location: Aspiration Dome, Sunnyvale, CA
+    url: https://www.optica.org/events/industry_events/2026/pecc_summit_optica_apc_photonic_enabled_cloud_computing_summit/
+    desc: Industry summit on photonics-enabled AI and cloud infrastructure, with a 2026 focus on co-packaged
+      optics manufacturing, scalability, and packaging.
+    tags:
+    - asic
+    - pd
 
   - name: 'Siemens EDA Webinar: Benefits and Effects of Introducing Analysis Tools to Power Distribution
       Network Design'
@@ -261,6 +273,35 @@ events:
       systems, and AI infrastructure.
     tags:
     - arch
+
+  # --- Week of Oct 26, 2026 ------------
+  - name: 'Aldec Webinar: Practical LLM Techniques for FPGA Functional Verification'
+    date: '2026-10-29'
+    week_of: '2026-10-26'
+    date_display: Oct 29, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.aldec.com/en/support/training/webinars
+    desc: Aldec webinar on applying large language model techniques to accelerate FPGA functional verification
+      workflows.
+    tags:
+    - verif
+    - rtl
+
+  # --- Week of Nov 02, 2026 ------------
+  - name: ICCAD 2026 (IEEE/ACM International Conference on Computer-Aided Design)
+    date: '2026-11-08'
+    week_of: '2026-11-02'
+    date_display: Nov 08 to 12, 2026 · San Jose, CA
+    mode: local
+    location: San Jose, CA
+    url: https://iccad.com/2026
+    desc: The premier IEEE/ACM conference on electronic design automation, covering the full spectrum of
+      computer aided design research and innovation.
+    tags:
+    - eda
+    - asic
+    - papers
 
   # --- Week of Feb 08, 2027 ------------
   - name: ISSCC 2027
