@@ -23,63 +23,11 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-09-21"
-this_week: "2026-09-21"
+refreshed: "2026-09-28"
+this_week: "2026-09-28"
 
 events:
-  # --- Week of Sep 21, 2026  (current) ------------
-  - name: 'IEEE Webinar: Silicon for All, Breaking Barriers in IC Fabrication through Open Silicon'
-    date: '2026-09-21'
-    week_of: '2026-09-21'
-    date_display: Sep 21, 2026 · online
-    mode: online
-    location: Online
-    url: https://sscs.ieee.org/event/silicon-for-all-breaking-barriers-in-ic-fabrication-through-open-silicon-integrated-circuit-fabrication-through-ieee-division-i-open-silicon-initiative-webinars-for-young-excellence/
-    desc: IEEE Division I Open Silicon Initiative webinar on open source design tools, PDKs, and accessible
-      fabrication paths from education to tape-out.
-    tags:
-    - asic
-
-  - name: 2026 GSA U.S. Executive Forum
-    date: '2026-09-22'
-    week_of: '2026-09-21'
-    date_display: Sep 22, 2026 · Menlo Park, CA
-    mode: local
-    location: Rosewood Sand Hill, Menlo Park, CA
-    url: https://www.gsaglobal.org/events/event/2026-usef/
-    desc: Global Semiconductor Alliance gathering of senior semiconductor executives for high level dialogue
-      on industry strategy and collaboration.
-    tags:
-    - arch
-
-  - name: TSMC 2026 North America OIP Ecosystem Forum
-    date: '2026-09-23'
-    week_of: '2026-09-21'
-    date_display: Sep 23, 2026 · Santa Clara, CA
-    mode: local
-    location: Santa Clara Convention Center, Santa Clara, CA
-    url: https://www.tsmc.com/static/english/campaign/oip2026/index.html
-    desc: TSMC's Open Innovation Platform forum connecting chip design teams with EDA, IP, and packaging
-      partners on TSMC process technology.
-    tags:
-    - asic
-    - eda
-
-  - name: 'Aldec Webinar: Practical Co-Simulation Techniques with OSVVM, Part 3 (Protocol Verification with
-      Co-Simulation)'
-    date: '2026-09-24'
-    week_of: '2026-09-21'
-    date_display: Sep 24, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.aldec.com/en/support/training/webinars
-    desc: Third part of Aldec's OSVVM co-simulation webinar series, introducing protocol verification through
-      co-simulation techniques.
-    tags:
-    - verif
-    - rtl
-
-  # --- Week of Sep 28, 2026 ------------
+  # --- Week of Sep 28, 2026  (current) ------------
   - name: 'IEEE SSCS Technical Webinar: In-Memory Computing for Scalable Next-generation AI Systems'
     date: '2026-09-28'
     week_of: '2026-09-28'
@@ -155,6 +103,19 @@ events:
       and AI in design verification, with an online attendance option.
     tags:
     - verif
+    - arch
+
+  - name: Siemens Bay Area Semiconductor Summit
+    date: '2026-10-07'
+    week_of: '2026-10-05'
+    date_display: Oct 07, 2026 · Santa Clara, CA
+    mode: local
+    location: Santa Clara, CA
+    url: https://www.siemens.com/en-us/events/eda/
+    desc: Siemens EDA regional summit on AI-driven design enablement and advanced-node semiconductor design
+      innovations for Bay Area chip teams.
+    tags:
+    - asic
     - arch
 
   # --- Week of Oct 12, 2026 ------------
@@ -262,6 +223,44 @@ events:
     - verif
     - eda
 
+  - name: Rambus Design Summit 2026
+    date: '2026-10-22'
+    week_of: '2026-10-19'
+    date_display: Oct 22, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.rambus.com/rambus-design-summit/
+    desc: Virtual Rambus summit on memory, interconnect, and security solutions enabling agentic AI across
+      data center, edge, and client silicon.
+    tags:
+    - arch
+    - asic
+
+  - name: OktoberTech Silicon Valley 2026
+    date: '2026-10-22'
+    week_of: '2026-10-19'
+    date_display: Oct 22, 2026 · Mountain View, CA
+    mode: local
+    location: Computer History Museum, Mountain View, CA
+    url: https://www.infineon.com/event/oktobertech/oktobertech-silicon-valley
+    desc: Infineon's tenth-anniversary Silicon Valley technology showcase on emerging semiconductor trends
+      and new product demos for customers and partners.
+    tags:
+    - asic
+
+  - name: 'CadenceCONNECT: Photonics and Quantum Technologies 2026'
+    date: '2026-10-22'
+    week_of: '2026-10-19'
+    date_display: Oct 22 to 23, 2026 · San Jose, CA
+    mode: local
+    location: Cadence Design Systems HQ, San Jose, CA
+    url: https://www.cadence.com/en_US/home/company/events/industry-events/cadenceconnect--photonics-and-quantum-technologies.html
+    desc: Ninth annual Cadence event on photonic and quantum design flows, with technical talks and a hands-on
+      workshop for photonic IC design challenges.
+    tags:
+    - asic
+    - pd
+
   - name: CASPA 35th Annual Conference and Dinner Banquet
     date: '2026-10-23'
     week_of: '2026-10-19'
@@ -275,6 +274,19 @@ events:
     - arch
 
   # --- Week of Oct 26, 2026 ------------
+  - name: 'Siemens EDA Webinar: Reference Workflow for the Intel Foundry EMIB Platform'
+    date: '2026-10-28'
+    week_of: '2026-10-26'
+    date_display: Oct 28, 2026 · online
+    mode: online
+    location: Online
+    url: https://webinars.sw.siemens.com/en-US/workflow-for-intel-foundry-services-emib-platform/
+    desc: Siemens EDA and Intel Foundry walk through a prototype IC packaging workflow for the EMIB embedded
+      bridge advanced-packaging platform.
+    tags:
+    - pd
+    - asic
+
   - name: 'Aldec Webinar: Practical LLM Techniques for FPGA Functional Verification'
     date: '2026-10-29'
     week_of: '2026-10-26'
@@ -287,6 +299,19 @@ events:
     tags:
     - verif
     - rtl
+
+  - name: 'Synopsys Webinar: Unveiling IC-star, Full-Flow Autonomy from Digital to Analog'
+    date: '2026-10-29'
+    week_of: '2026-10-26'
+    date_display: Oct 29, 2026 · online
+    mode: online
+    location: Online
+    url: https://semiwiki.com/event/webinar-unveiling-ic-star-full-flow-autonomy-from-digital-to-analog/
+    desc: Synopsys webinar introducing IC-star, an agentic AI system aimed at autonomous full-flow chip design
+      from digital through analog.
+    tags:
+    - asic
+    - eda
 
   # --- Week of Nov 02, 2026 ------------
   - name: ICCAD 2026 (IEEE/ACM International Conference on Computer-Aided Design)
@@ -302,6 +327,19 @@ events:
     - eda
     - asic
     - papers
+
+  # --- Week of Nov 09, 2026 ------------
+  - name: 'GSA: 2026 WISH Conference'
+    date: '2026-11-10'
+    week_of: '2026-11-09'
+    date_display: Nov 10, 2026 · Santa Clara, CA
+    mode: local
+    location: Santa Clara Convention Center, Santa Clara, CA
+    url: https://www.gsaglobal.org/events/event/2026-wish-conference/
+    desc: Global Semiconductor Alliance's Women in Semiconductor Hardware conference for industry leaders,
+      held alongside the Dr. Lisa Su Woman of Innovation Award.
+    tags:
+    - arch
 
   # --- Week of Feb 08, 2027 ------------
   - name: ISSCC 2027
