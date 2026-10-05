@@ -23,99 +23,62 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-09-28"
-this_week: "2026-09-28"
+refreshed: "2026-10-05"
+this_week: "2026-10-05"
 
 events:
-  # --- Week of Sep 28, 2026  (current) ------------
-  - name: 'IEEE SSCS Technical Webinar: In-Memory Computing for Scalable Next-generation AI Systems'
-    date: '2026-09-28'
-    week_of: '2026-09-28'
-    date_display: Sep 28, 2026 · online
-    mode: online
-    location: Online
-    url: https://sscs.ieee.org/events/category/upcoming-events/
-    desc: IEEE Solid-State Circuits Society technical webinar with Naveen Verma on in-memory computing architectures
-      for scalable AI hardware.
-    tags:
-    - arch
-
-  - name: 'Aldec Webinar: SystemVerilog Interface Introductory Seminar'
-    date: '2026-09-30'
-    week_of: '2026-09-28'
-    date_display: Sep 30, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.aldec.com/en/support/training/webinars
-    desc: Introductory Aldec seminar on using SystemVerilog interfaces in RTL design and verification environments.
-    tags:
-    - rtl
-    - verif
-
-  - name: Synopsys PrimeTime Nexus
-    date: '2026-09-30'
-    week_of: '2026-09-28'
-    date_display: Sep 30, 2026 · Sunnyvale, CA
-    mode: local
-    location: Synopsys Building 1, Sunnyvale, CA
-    url: https://www.synopsys.com/events/primetime-nexus.html
-    desc: In-person half-day Synopsys event on PrimeTime and the evolving demands of static timing analysis
-      signoff.
-    tags:
-    - pd
-    - eda
-
-  - name: 'Verification Academy Weekly Webinar: Did You Know QuestaSim Supports VHDL-2019?'
-    date: '2026-10-01'
-    week_of: '2026-09-28'
-    date_display: Oct 01, 2026 · online
-    mode: online
-    location: Online
-    url: https://verificationacademy.com/all-content/?content_type=Webinar
-    desc: Opening session of Siemens Verification Academy's fall weekly webinar series, covering VHDL-2019
-      support in QuestaSim.
-    tags:
-    - verif
-    - rtl
-
-  # --- Week of Oct 05, 2026 ------------
-  - name: 'IEEE SSCS Directions Series: Town Hall Meeting, IEEE Journal of Solid-State Circuits'
-    date: '2026-10-05'
-    week_of: '2026-10-05'
-    date_display: Oct 05, 2026 · online
-    mode: online
-    location: Online
-    url: https://sscs.ieee.org/events/category/upcoming-events/
-    desc: IEEE Solid-State Circuits Society town hall on the direction of the Journal of Solid-State Circuits,
-      open to the community.
-    tags:
-    - papers
-    - arch
-
-  - name: Verification & Semiconductor Futures Conference, Austin
-    date: '2026-10-06'
-    week_of: '2026-10-05'
-    date_display: Oct 06, 2026 · online
-    mode: online
-    location: Online (hybrid with Hilton Austin Airport, Austin, TX)
-    url: https://www.tessolve.com/verification-futures/vf2026-austin/
-    desc: Hybrid verification and semiconductor conference covering formal methods, CPU and RISC-V verification,
-      and AI in design verification, with an online attendance option.
-    tags:
-    - verif
-    - arch
-
+  # --- Week of Oct 05, 2026  (current) ------------
   - name: Siemens Bay Area Semiconductor Summit
     date: '2026-10-07'
     week_of: '2026-10-05'
     date_display: Oct 07, 2026 · Santa Clara, CA
     mode: local
-    location: Santa Clara, CA
-    url: https://www.siemens.com/en-us/events/eda/
-    desc: Siemens EDA regional summit on AI-driven design enablement and advanced-node semiconductor design
-      innovations for Bay Area chip teams.
+    location: Siemens Office, Santa Clara, CA
+    url: https://resources.sw.siemens.com/en-US/bay-area-semiconductor-summit-ai-hardware-innovation/
+    desc: Siemens EDA regional summit on AI hardware innovation, covering advanced packaging, multiphysics
+      simulation, and thermal management for Bay Area chip teams.
     tags:
+    - pd
+    - eda
     - asic
+
+  - name: 'GSA Webinar: Scaling AI Inference, Implications for Semiconductors'
+    date: '2026-10-07'
+    week_of: '2026-10-05'
+    date_display: Oct 07, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.gsaglobal.org/scaling-ai-inference/
+    desc: Global Semiconductor Alliance and McKinsey webinar on shifts defining the next phase of AI inference,
+      including specialized silicon and full-stack optimization.
+    tags:
+    - arch
+    - asic
+
+  - name: 'Cadence Webinar: Unlocking AI-Powered Verification Analytics with the Xcelium SimAI App'
+    date: '2026-10-07'
+    week_of: '2026-10-05'
+    date_display: Oct 07, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.cadence.com/en_US/home/company/events.html
+    desc: Cadence training webinar on using the Xcelium SimAI App to apply machine learning to simulation
+      regression data for faster debug.
+    tags:
+    - verif
+    - eda
+
+  - name: 'IEEE EPS Webinar: Co-Packaged Optical Transceivers for HPC, Data Center and AI Applications'
+    date: '2026-10-09'
+    week_of: '2026-10-05'
+    date_display: Oct 09, 2026 · online
+    mode: online
+    location: Online
+    url: https://events.vtools.ieee.org/m/568144
+    desc: IEEE Electronics Packaging Society virtual talk by an Nvidia hardware architect on silicon-photonics
+      based co-packaged optics for AI systems.
+    tags:
+    - pd
     - arch
 
   # --- Week of Oct 12, 2026 ------------
@@ -126,24 +89,25 @@ events:
     mode: local
     location: San Jose McEnery Convention Center, San Jose, CA
     url: https://www.opencompute.org/summit/global-summit
-    desc: Open Compute Project's flagship summit on open hardware and infrastructure at scale, including
-      custom silicon and design verification sessions.
+    desc: Open Compute Project's flagship annual summit where hyperscalers and silicon vendors showcase
+      open hardware designs for servers, networking, and data center infrastructure.
     tags:
     - arch
-    - verif
+    - asic
 
-  - name: Imec Technology Forum USA 2026
+  - name: Imec Technology Forum (ITF) USA 2026
     date: '2026-10-12'
     week_of: '2026-10-12'
     date_display: Oct 12, 2026 · San Francisco, CA
     mode: local
-    location: San Francisco, CA (held alongside SEMICON West)
-    url: https://www.imecitf.com/semicon-usa
-    desc: Imec's USA technology forum on the AI deep-tech stack from silicon to systems, held alongside
-      SEMICON West with imec researchers and industry partners.
+    location: Held alongside SEMICON West, Moscone Center, San Francisco, CA
+    url: https://www.imec-int.com/en/events/itf-usa-2026-semiconr-west
+    desc: Imec's USA forum held alongside SEMICON West, covering the AI deep-tech stack from silicon to
+      systems, including advanced packaging and energy-efficient compute.
     tags:
     - asic
     - arch
+    - pd
 
   - name: SEMICON West 2026
     date: '2026-10-13'
@@ -152,63 +116,52 @@ events:
     mode: local
     location: Moscone Center, San Francisco, CA
     url: https://www.semiconwest.org/
-    desc: SEMI's major semiconductor industry event covering advanced manufacturing, packaging, and the
-      path toward two trillion dollars in industry revenue.
+    desc: SEMI's major semiconductor industry trade show covering advanced manufacturing, advanced packaging,
+      and AI hardware.
     tags:
+    - pd
     - asic
+    - eda
+
+  - name: 'CadenceCONNECT: Photonics and Quantum Technologies 2026'
+    date: '2026-10-14'
+    week_of: '2026-10-12'
+    date_display: Oct 14 to 15, 2026 · San Jose, CA
+    mode: local
+    location: Cadence Design Systems HQ, San Jose, CA
+    url: https://www.cadence.com/en_US/home/company/events/industry-events/cadenceconnect--photonics-and-quantum-technologies.html
+    desc: Cadence event marking a decade of photonic IC progress, with technical sessions and hands-on
+      workshops on photonic and quantum design flows.
+    tags:
+    - eda
+    - pd
 
   - name: PDF Solutions CONNECT 2026
     date: '2026-10-15'
     week_of: '2026-10-12'
     date_display: Oct 15 to 16, 2026 · San Francisco, CA
     mode: local
-    location: San Francisco, CA
+    location: The Westin St. Francis, San Francisco, CA
     url: https://events.pdf.com/connect2026/
-    desc: PDF Solutions conference on AI-driven semiconductor manufacturing analytics, featuring its next-generation
-      Exensio Aurora platform.
+    desc: PDF Solutions conference on AI-driven semiconductor manufacturing analytics, featuring keynotes
+      and demos of agentic AI for fab data at scale.
     tags:
     - asic
-
-  # --- Week of Oct 19, 2026 ------------
-  - name: 'Cadence Webinar: Formal Verification Performance Optimization'
-    date: '2026-10-20'
-    week_of: '2026-10-19'
-    date_display: Oct 20, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.cadence.com/en_US/home/company/events/webinars/formal-verification-performance-optimization-webinar.html
-    desc: Cadence Education Services webinar on using SVA properties and HDL helper code to significantly
-      increase formal verification performance.
-    tags:
-    - verif
     - eda
 
+  # --- Week of Oct 19, 2026 ------------
   - name: PECC Summit 2026 (Optica + APC Photonic-Enabled Cloud Computing Summit)
     date: '2026-10-20'
     week_of: '2026-10-19'
     date_display: Oct 20 to 21, 2026 · Sunnyvale, CA
     mode: local
-    location: Aspiration Dome, Sunnyvale, CA
+    location: HPE Aspiration Dome, Sunnyvale, CA
     url: https://www.optica.org/events/industry_events/2026/pecc_summit_optica_apc_photonic_enabled_cloud_computing_summit/
-    desc: Industry summit on photonics-enabled AI and cloud infrastructure, with a 2026 focus on co-packaged
-      optics manufacturing, scalability, and packaging.
+    desc: Industry summit on photonics for data centers and AI infrastructure, covering optical interconnects,
+      co-packaged optics, and silicon photonics manufacturing.
     tags:
-    - asic
-    - pd
-
-  - name: 'Siemens EDA Webinar: Benefits and Effects of Introducing Analysis Tools to Power Distribution
-      Network Design'
-    date: '2026-10-20'
-    week_of: '2026-10-19'
-    date_display: Oct 20, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.siemens.com/en-us/events/eda/
-    desc: Siemens EDA session on applying analysis tools to power distribution network design for chip physical
-      design signoff.
-    tags:
-    - pd
     - eda
+    - arch
 
   - name: 'CadenceCONNECT: Jasper User Group 2026'
     date: '2026-10-21'
@@ -217,24 +170,11 @@ events:
     mode: local
     location: Cadence Design Systems HQ, San Jose, CA
     url: https://www.cvent.com/c/abstracts/1cfdcbc3-530c-40a6-8780-d47e32e752f1
-    desc: Annual in-depth technical conference on Cadence Jasper formal verification technologies and methodologies
-      for designers and verification engineers.
+    desc: Annual in-depth technical conference on Cadence Jasper formal verification technologies and
+      methodologies for designers and verification engineers.
     tags:
     - verif
     - eda
-
-  - name: Rambus Design Summit 2026
-    date: '2026-10-22'
-    week_of: '2026-10-19'
-    date_display: Oct 22, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.rambus.com/rambus-design-summit/
-    desc: Virtual Rambus summit on memory, interconnect, and security solutions enabling agentic AI across
-      data center, edge, and client silicon.
-    tags:
-    - arch
-    - asic
 
   - name: OktoberTech Silicon Valley 2026
     date: '2026-10-22'
@@ -247,19 +187,20 @@ events:
       and new product demos for customers and partners.
     tags:
     - asic
+    - arch
 
-  - name: 'CadenceCONNECT: Photonics and Quantum Technologies 2026'
+  - name: Rambus Design Summit 2026
     date: '2026-10-22'
     week_of: '2026-10-19'
-    date_display: Oct 22 to 23, 2026 · San Jose, CA
-    mode: local
-    location: Cadence Design Systems HQ, San Jose, CA
-    url: https://www.cadence.com/en_US/home/company/events/industry-events/cadenceconnect--photonics-and-quantum-technologies.html
-    desc: Ninth annual Cadence event on photonic and quantum design flows, with technical talks and a hands-on
-      workshop for photonic IC design challenges.
+    date_display: Oct 22, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.rambus.com/rambus-design-summit/
+    desc: Virtual Rambus summit on memory, interconnect, and data center performance for next-generation
+      AI computing infrastructure.
     tags:
+    - arch
     - asic
-    - pd
 
   - name: CASPA 35th Annual Conference and Dinner Banquet
     date: '2026-10-23'
@@ -267,25 +208,39 @@ events:
     date_display: Oct 23 to 24, 2026 · Santa Clara, CA
     mode: local
     location: Santa Clara Convention Center, Santa Clara, CA
-    url: https://caspa.com/acdb-2026-registration
-    desc: Chinese American Semiconductor Professional Association's annual summit on advanced silicon, intelligent
-      systems, and AI infrastructure.
+    url: https://caspa.com/acdb-2026-announcement
+    desc: Chinese American Semiconductor Professional Association's flagship summit on advanced silicon,
+      intelligent systems, and AI infrastructure.
+    tags:
+    - arch
+    - asic
+
+  - name: 'IEEE SSCS Women in Circuits Retreat: Stories as Bridges in Networking'
+    date: '2026-10-23'
+    week_of: '2026-10-19'
+    date_display: Oct 23, 2026 · online
+    mode: online
+    location: Online
+    url: https://sscs.ieee.org/events/
+    desc: IEEE Solid-State Circuits Society webinar on storytelling and networking skills, part of the
+      Women in Circuits retreat series.
     tags:
     - arch
 
   # --- Week of Oct 26, 2026 ------------
-  - name: 'Siemens EDA Webinar: Reference Workflow for the Intel Foundry EMIB Platform'
-    date: '2026-10-28'
+  - name: 'Synopsys Webinar: Unveiling IC-star, Full-Flow Autonomy from Digital to Analog'
+    date: '2026-10-29'
     week_of: '2026-10-26'
-    date_display: Oct 28, 2026 · online
+    date_display: Oct 29, 2026 · online
     mode: online
     location: Online
-    url: https://webinars.sw.siemens.com/en-US/workflow-for-intel-foundry-services-emib-platform/
-    desc: Siemens EDA and Intel Foundry walk through a prototype IC packaging workflow for the EMIB embedded
-      bridge advanced-packaging platform.
+    url: https://event.on24.com/wcc/r/5507421/A45CEFBA43BC7B2A43F265520AFDBA32
+    desc: Synopsys webinar introducing IC-star, an agentic AI system aimed at autonomous full-flow chip
+      design from digital through analog.
     tags:
-    - pd
     - asic
+    - eda
+    - pd
 
   - name: 'Aldec Webinar: Practical LLM Techniques for FPGA Functional Verification'
     date: '2026-10-29'
@@ -293,25 +248,37 @@ events:
     date_display: Oct 29, 2026 · online
     mode: online
     location: Online
-    url: https://www.aldec.com/en/support/training/webinars
+    url: https://www.aldec.com/en/company/events
     desc: Aldec webinar on applying large language model techniques to accelerate FPGA functional verification
       workflows.
     tags:
     - verif
-    - rtl
+    - eda
 
-  - name: 'Synopsys Webinar: Unveiling IC-star, Full-Flow Autonomy from Digital to Analog'
-    date: '2026-10-29'
+  - name: 'IEEE SSCS Technical Webinar: Integrated Circuits for BMS Applications'
+    date: '2026-10-30'
     week_of: '2026-10-26'
-    date_display: Oct 29, 2026 · online
+    date_display: Oct 30, 2026 · online
     mode: online
     location: Online
-    url: https://semiwiki.com/event/webinar-unveiling-ic-star-full-flow-autonomy-from-digital-to-analog/
-    desc: Synopsys webinar introducing IC-star, an agentic AI system aimed at autonomous full-flow chip design
-      from digital through analog.
+    url: https://sscs.ieee.org/events/
+    desc: IEEE Solid-State Circuits Society technical webinar on integrated circuit design for battery
+      management system applications.
     tags:
     - asic
-    - eda
+    - arch
+
+  - name: 'IEEE SSCS Women in Circuits Retreat: Crack the Code, Get Your Next Promotion'
+    date: '2026-10-30'
+    week_of: '2026-10-26'
+    date_display: Oct 30, 2026 · online
+    mode: online
+    location: Online
+    url: https://sscs.ieee.org/events/
+    desc: IEEE Solid-State Circuits Society career-development webinar on promotion strategies, part of
+      the Women in Circuits retreat series.
+    tags:
+    - arch
 
   # --- Week of Nov 02, 2026 ------------
   - name: ICCAD 2026 (IEEE/ACM International Conference on Computer-Aided Design)
@@ -322,7 +289,7 @@ events:
     location: San Jose, CA
     url: https://iccad.com/2026
     desc: The premier IEEE/ACM conference on electronic design automation, covering the full spectrum of
-      computer aided design research and innovation.
+      computer-aided design research and innovation.
     tags:
     - eda
     - asic
@@ -354,3 +321,50 @@ events:
     tags:
     - papers
     - arch
+
+  # --- Week of Feb 15, 2027 ------------
+  - name: RISC-V Summit North America 2027
+    date: '2027-02-16'
+    week_of: '2027-02-15'
+    date_display: Feb 16 to 18, 2027 · San Francisco, CA
+    mode: local
+    location: Hyatt Regency Embarcadero, San Francisco, CA
+    url: https://riscvnasummit.com/2027
+    desc: RISC-V International's flagship North America event covering the open ISA ecosystem from IP
+      cores to silicon and software.
+    tags:
+    - arch
+    - rtl
+    - asic
+
+  # --- Week of Mar 01, 2027 ------------
+  - name: DVCon US 2027
+    date: '2027-03-01'
+    week_of: '2027-03-01'
+    date_display: Mar 01 to 04, 2027 · Santa Clara, CA
+    mode: local
+    location: Hyatt Regency Santa Clara, Santa Clara, CA
+    url: https://dvcon.org/
+    desc: The premier conference on languages, tools, and methodologies for RTL design and functional
+      verification of chips and electronic systems.
+    tags:
+    - rtl
+    - verif
+    - eda
+
+  # --- Week of Jul 05, 2027 ------------
+  - name: DAC 2027 (64th Design Automation Conference)
+    date: '2027-07-11'
+    week_of: '2027-07-05'
+    date_display: Jul 11 to 14, 2027 · San Jose, CA
+    mode: local
+    location: San Jose Convention Center, San Jose, CA
+    url: https://dac.com/2027
+    desc: A major chips-to-systems conference covering EDA, IP, design, and verification for electronic
+      systems.
+    tags:
+    - eda
+    - pd
+    - rtl
+    - verif
+    - papers
