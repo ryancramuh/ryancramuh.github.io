@@ -23,65 +23,11 @@
 #   tags [rtl,pd,asic,verif,arch,eda,papers], tentative (optional bool).
 # =============================================================================
 
-refreshed: "2026-10-05"
-this_week: "2026-10-05"
+refreshed: "2026-10-12"
+this_week: "2026-10-12"
 
 events:
-  # --- Week of Oct 05, 2026  (current) ------------
-  - name: Siemens Bay Area Semiconductor Summit
-    date: '2026-10-07'
-    week_of: '2026-10-05'
-    date_display: Oct 07, 2026 · Santa Clara, CA
-    mode: local
-    location: Siemens Office, Santa Clara, CA
-    url: https://resources.sw.siemens.com/en-US/bay-area-semiconductor-summit-ai-hardware-innovation/
-    desc: Siemens EDA regional summit on AI hardware innovation, covering advanced packaging, multiphysics
-      simulation, and thermal management for Bay Area chip teams.
-    tags:
-    - pd
-    - eda
-    - asic
-
-  - name: 'GSA Webinar: Scaling AI Inference, Implications for Semiconductors'
-    date: '2026-10-07'
-    week_of: '2026-10-05'
-    date_display: Oct 07, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.gsaglobal.org/scaling-ai-inference/
-    desc: Global Semiconductor Alliance and McKinsey webinar on shifts defining the next phase of AI inference,
-      including specialized silicon and full-stack optimization.
-    tags:
-    - arch
-    - asic
-
-  - name: 'Cadence Webinar: Unlocking AI-Powered Verification Analytics with the Xcelium SimAI App'
-    date: '2026-10-07'
-    week_of: '2026-10-05'
-    date_display: Oct 07, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.cadence.com/en_US/home/company/events.html
-    desc: Cadence training webinar on using the Xcelium SimAI App to apply machine learning to simulation
-      regression data for faster debug.
-    tags:
-    - verif
-    - eda
-
-  - name: 'IEEE EPS Webinar: Co-Packaged Optical Transceivers for HPC, Data Center and AI Applications'
-    date: '2026-10-09'
-    week_of: '2026-10-05'
-    date_display: Oct 09, 2026 · online
-    mode: online
-    location: Online
-    url: https://events.vtools.ieee.org/m/568144
-    desc: IEEE Electronics Packaging Society virtual talk by an Nvidia hardware architect on silicon-photonics
-      based co-packaged optics for AI systems.
-    tags:
-    - pd
-    - arch
-
-  # --- Week of Oct 12, 2026 ------------
+  # --- Week of Oct 12, 2026  (current) ------------
   - name: 2026 OCP Global Summit
     date: '2026-10-12'
     week_of: '2026-10-12'
@@ -130,8 +76,8 @@ events:
     mode: local
     location: Cadence Design Systems HQ, San Jose, CA
     url: https://www.cadence.com/en_US/home/company/events/industry-events/cadenceconnect--photonics-and-quantum-technologies.html
-    desc: Cadence event marking a decade of photonic IC progress, with technical sessions and hands-on
-      workshops on photonic and quantum design flows.
+    desc: Cadence event marking a decade of photonic IC progress, with technical sessions and hands-on workshops
+      on photonic and quantum design flows.
     tags:
     - eda
     - pd
@@ -150,6 +96,19 @@ events:
     - eda
 
   # --- Week of Oct 19, 2026 ------------
+  - name: Arm Create
+    date: '2026-10-19'
+    week_of: '2026-10-19'
+    date_display: Oct 19, 2026 · San Jose, CA
+    mode: local
+    location: The Tech Interactive, San Jose, CA
+    url: https://developer.arm.com/events
+    desc: Free, hands-on Arm developer event with technical sessions and live demos on PyTorch, ExecuTorch,
+      agentic AI, and edge and physical AI.
+    tags:
+    - arch
+    - asic
+
   - name: PECC Summit 2026 (Optica + APC Photonic-Enabled Cloud Computing Summit)
     date: '2026-10-20'
     week_of: '2026-10-19'
@@ -170,8 +129,8 @@ events:
     mode: local
     location: Cadence Design Systems HQ, San Jose, CA
     url: https://www.cvent.com/c/abstracts/1cfdcbc3-530c-40a6-8780-d47e32e752f1
-    desc: Annual in-depth technical conference on Cadence Jasper formal verification technologies and
-      methodologies for designers and verification engineers.
+    desc: Annual in-depth technical conference on Cadence Jasper formal verification technologies and methodologies
+      for designers and verification engineers.
     tags:
     - verif
     - eda
@@ -222,12 +181,25 @@ events:
     mode: online
     location: Online
     url: https://sscs.ieee.org/events/
-    desc: IEEE Solid-State Circuits Society webinar on storytelling and networking skills, part of the
-      Women in Circuits retreat series.
+    desc: IEEE Solid-State Circuits Society webinar on storytelling and networking skills, part of the Women
+      in Circuits retreat series.
     tags:
     - arch
 
   # --- Week of Oct 26, 2026 ------------
+  - name: 'Aldec Webinar: Practical LLM Techniques for FPGA Functional Verification'
+    date: '2026-10-29'
+    week_of: '2026-10-26'
+    date_display: Oct 29, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.aldec.com/en/company/events
+    desc: Aldec webinar on applying large language model techniques to accelerate FPGA functional verification
+      workflows.
+    tags:
+    - verif
+    - eda
+
   - name: 'Synopsys Webinar: Unveiling IC-star, Full-Flow Autonomy from Digital to Analog'
     date: '2026-10-29'
     week_of: '2026-10-26'
@@ -242,19 +214,6 @@ events:
     - eda
     - pd
 
-  - name: 'Aldec Webinar: Practical LLM Techniques for FPGA Functional Verification'
-    date: '2026-10-29'
-    week_of: '2026-10-26'
-    date_display: Oct 29, 2026 · online
-    mode: online
-    location: Online
-    url: https://www.aldec.com/en/company/events
-    desc: Aldec webinar on applying large language model techniques to accelerate FPGA functional verification
-      workflows.
-    tags:
-    - verif
-    - eda
-
   - name: 'IEEE SSCS Technical Webinar: Integrated Circuits for BMS Applications'
     date: '2026-10-30'
     week_of: '2026-10-26'
@@ -262,8 +221,8 @@ events:
     mode: online
     location: Online
     url: https://sscs.ieee.org/events/
-    desc: IEEE Solid-State Circuits Society technical webinar on integrated circuit design for battery
-      management system applications.
+    desc: IEEE Solid-State Circuits Society technical webinar on integrated circuit design for battery management
+      system applications.
     tags:
     - asic
     - arch
@@ -286,7 +245,7 @@ events:
     week_of: '2026-11-02'
     date_display: Nov 08 to 12, 2026 · San Jose, CA
     mode: local
-    location: San Jose, CA
+    location: San Jose Marriott, San Jose, CA
     url: https://iccad.com/2026
     desc: The premier IEEE/ACM conference on electronic design automation, covering the full spectrum of
       computer-aided design research and innovation.
@@ -307,6 +266,47 @@ events:
       held alongside the Dr. Lisa Su Woman of Innovation Award.
     tags:
     - arch
+
+  - name: 'Siemens EDA Webinar: Turning Shift-Left from Slogan to Reality'
+    date: '2026-11-10'
+    week_of: '2026-11-09'
+    date_display: Nov 10, 2026 · online
+    mode: online
+    location: Online
+    url: https://eda.sw.siemens.com/en-US/ic/catapult-high-level-synthesis/events/
+    desc: Siemens EDA webinar on how SystemC models built with the open-source Matchlib library and synthesized
+      with Catapult HLS close the gap between early design needs and late-arriving RTL.
+    tags:
+    - rtl
+    - eda
+
+  # --- Week of Nov 16, 2026 ------------
+  - name: 2026 SIA Awards Dinner
+    date: '2026-11-19'
+    week_of: '2026-11-16'
+    date_display: Nov 19, 2026 · San Jose, CA
+    mode: local
+    location: Signia by Hilton San Jose, San Jose, CA
+    url: https://www.semiconductors.org/events/2026-sia-awards-dinner/
+    desc: Semiconductor Industry Association's annual awards dinner recognizing leadership and innovation
+      across the US chip industry.
+    tags:
+    - asic
+    - arch
+
+  - name: 'Siemens EDA Logic Verification Seminar: Questa Lint for Early RTL Quality'
+    date: '2026-11-19'
+    week_of: '2026-11-16'
+    date_display: Nov 19, 2026 · online
+    mode: online
+    location: Online
+    url: https://www.siemens.com/en-us/events/eda/
+    desc: Siemens EDA seminar on the Questa Series and HDL Designer Series, introducing Questa Lint features
+      and demonstrations for catching RTL quality issues early.
+    tags:
+    - rtl
+    - verif
+    - eda
 
   # --- Week of Feb 08, 2027 ------------
   - name: ISSCC 2027
@@ -330,8 +330,8 @@ events:
     mode: local
     location: Hyatt Regency Embarcadero, San Francisco, CA
     url: https://riscvnasummit.com/2027
-    desc: RISC-V International's flagship North America event covering the open ISA ecosystem from IP
-      cores to silicon and software.
+    desc: RISC-V International's flagship North America event covering the open ISA ecosystem from IP cores
+      to silicon and software.
     tags:
     - arch
     - rtl
@@ -345,8 +345,8 @@ events:
     mode: local
     location: Hyatt Regency Santa Clara, Santa Clara, CA
     url: https://dvcon.org/
-    desc: The premier conference on languages, tools, and methodologies for RTL design and functional
-      verification of chips and electronic systems.
+    desc: The premier conference on languages, tools, and methodologies for RTL design and functional verification
+      of chips and electronic systems.
     tags:
     - rtl
     - verif
